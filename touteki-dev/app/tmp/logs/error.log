@@ -1,0 +1,13 @@
+2017-08-21 20:49:59 Error: [MissingComponentException] Component class ToolberComponent could not be found.
+Exception Attributes: array (
+  'class' => 'ToolberComponent',
+  'plugin' => 'DebugKit',
+)
+Request URL: /
+Stack Trace:
+#0 /var/www/html/touteki-dev/lib/Cake/Controller/ComponentCollection.php(53): ComponentCollection->load('DebugKit.Toolbe...', Array)
+#1 /var/www/html/touteki-dev/lib/Cake/Controller/Controller.php(644): ComponentCollection->init(Object(PagesController))
+#2 /var/www/html/touteki-dev/lib/Cake/Routing/Dispatcher.php(188): Controller->constructClasses()
+#3 /var/www/html/touteki-dev/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#4 /var/www/html/touteki-dev/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
