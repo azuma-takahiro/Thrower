@@ -110,7 +110,7 @@ App::build(array(
         ROOT.DS.APP_DIR.DS.'View'.DS.'Admin'.DS,
         ROOT.DS.APP_DIR.DS.'View'.DS.'General'.DS,
     ),
-))
+));
 CakeLog::config('debug', array(
 	'engine' => 'File',
 	'types' => array('notice', 'info', 'debug'),
