@@ -33,8 +33,8 @@ class AdminController extends AppController {
         parent::beforeFilter();
         // $this->layout = '';
         // $this->__setAdminAuth();
-        $this->set('uri_segment', explode('/', $_SERVER['REQUEST_URI']));
-        $this->Paginator->settings = $this->paginate;
+        // $this->set('uri_segment', explode('/', $_SERVER['REQUEST_URI']));
+        // $this->Paginator->settings = $this->paginate;
     }
 
     private function __setAdminAuth() {
