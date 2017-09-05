@@ -3,20 +3,17 @@
 App::uses('AdminController', 'Controller');
 
 class AdminUsersController extends AdminController {
-    // public $extra_uses          = [
-    //     'User',
-    // ];
-    // public $extra_components    = [];
-    // public $extra_helpers       = [];
-    //
-    // public function beforeFilter() {
-    //     parent::beforeFilter();
-    //     $this->Auth->allow('add', 'logout');
-    // }
-
-    public $uses = [
+    public $uses          = [
         'User',
     ];
+    public $components    = [];
+    public $helpers       = [];
+
+    public function beforeFilter() {
+        // parent::beforeFilter();
+        // $this->Auth->allow('add', 'logout');
+        $this->set('uri_segment', explode('/', $_SERVER['REQUEST_URI']));
+    }
 
     /**
      * Indexページ表示用メソッド
