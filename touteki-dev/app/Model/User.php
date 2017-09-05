@@ -31,6 +31,10 @@ class User extends AppModel {
             'User.delete_flg' => 0,
         ];
 
+        $order = [
+            'User.id ASC'
+        ];
+
         return $this->find('all', compact('recursive', 'fields', 'conditions'));
     }
 }
