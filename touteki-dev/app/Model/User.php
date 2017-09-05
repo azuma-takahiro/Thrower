@@ -8,8 +8,24 @@ App::uses('AppModel', 'Model');
  */
 class User extends AppModel {
 
-    // public $useTable = 'users';
-
+    public $validate = [
+        'username' => [
+            'required' => [
+                'rule' => 'notBlank',
+                'message' => '入力必須です',
+            ],
+            'duplication' => [
+                'rule' => 'isUnique',
+                'message' => 'すでに登録のあるusernameです'
+            ]
+        ],
+        'password' => [
+            'required' => [
+                'rule' => 'notBlank',
+                'message' => '入力必須です',
+            ],
+        ],
+    ];
     /**
      * Userテーブル一覧を取得
      * @return array $users
@@ -32,9 +48,9 @@ class User extends AppModel {
         ];
 
         $order = [
-            'User.id ASC'
+            'User.id DESC'
         ];
 
-        return $this->find('all', compact('recursive', 'fields', 'conditions'));
+        return $this->find('all', compact('recursive', 'fields', 'conditions','order'));
     }
 }

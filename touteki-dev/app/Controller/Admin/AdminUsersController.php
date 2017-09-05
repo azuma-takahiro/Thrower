@@ -6,7 +6,9 @@ class AdminUsersController extends AdminController {
     public $uses          = [
         'User',
     ];
-    public $components    = [];
+    public $components    = [
+        'Flash',
+    ];
     public $helpers       = [];
 
     public function beforeFilter() {
@@ -22,52 +24,61 @@ class AdminUsersController extends AdminController {
     public function index() {
         $users = $this->User->getUserList();
         $this->set('users', $users);
-        // $usersr = $this->User->find('all');
-        // debug($usersr);exit;
     }
 
-    public function add() {
-        if ($this->request->is('post')) {
-            $this->User->create();
-            if ($this->User->save($this->request->data)) {
-                $this->Flash->success(__('新規ユーザが登録されました。'));
-                return $this->redirect(array('action' => 'index'));
-            }
-            $this->Flash->error(
-                __('ユーザ登録に失敗しました。もう一度実行してください。')
-            );
-        }
-    }
-
+    /**
+     * 新規・編集画面
+     * @param  [type] $id [description]
+     * @return [type]     [description]
+     */
     public function edit($id = null) {
-        $this->User->id = $id;
-        if (!$this->User->exists()) {
-            throw new NotFoundException(__('Invalid user'));
-        }
-        if ($this->request->is('post') || $this->request->is('put')) {
-            if ($this->User->save($this->request->data)) {
-                $this->Flash->success(__('ユーザ情報が更新されました'));
-                return $this->redirect(array('action' => 'index'));
-            }
-            $this->Flash->error(
-                __('ユーザ情報の更新に失敗しました。もう一度実行してください。')
-            );
-        } else {
-            $this->request->data = $this->User->findById($id);
-            unset($this->request->data['User']['password']);
+        if(!empty($id)) {
+            $user = $this->User->findById($id);
+            $this->request->data = $user;
         }
     }
 
-    public function delete() {
+    /**
+     * 新規登録用メソッド
+     */
+    public function save() {
+        if ($this->request->onlyAllow('post','put')) {
+            $data = $this->request->data;
 
-        $id = $this->request->pass[0];
+            if(empty($data['id'])) {
+                $this->User->create();
+            } else {
+                $this->User->id = $data['id'];
+            }
+
+            $this->User->set($data);
+
+            if($this->User->validates()) {
+                $this->User->save($data);
+                $this->Flash->success(__('保存完了しました'));
+                $this->redirect(['action' => 'index']);
+            } else {
+                $this->render('edit');
+            }
+
+        } else {
+            throw new MethodNotAllowedException;
+            return;
+        }
+    }
+
+    public function delete($id = null) {
+
+        if (!$id) {
+            throw new ForbiddenException;
+            return;
+        }
+
         $this->User->id = $id;
-        $this->User->saveField('deleted', 1);
 
-        $msg = sprintf(
-            'ユーザ ID:%sを削除しました。',
-            $id
-        );
+        $this->User->saveField('delete_flg', 1);
+
+        $msg = sprintf('ユーザ ID:%sを削除しました。',$id);
 
         $this->Flash->set($msg);
 

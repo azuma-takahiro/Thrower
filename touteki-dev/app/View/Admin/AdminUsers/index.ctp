@@ -1,8 +1,4 @@
-<?php
-    echo $this->Html->link('登録',
-      array('controller' => 'users', 'action' => 'add'),
-      array('class' => 'btn btn-default'));
-?>
+<a href="<?=$this->Html->url(['action' => 'edit']);?>" class="btn btn-primary">登録</a>
 <table class="table table-striped table-hover">
     <thead>
         <tr>
@@ -19,21 +15,15 @@
         <?php if (!empty($users)): ?>
             <?php foreach ($users as $user): ?>
                 <tr>
-                    <td><?php echo $user['User']['id']; ?></td>
-                    <td><?php echo $user['User']['username']; ?></td>
-                    <td><?php echo $user['User']['password']; ?></td>
-                    <td><?php echo $user['User']['role']; ?></td>
-                    <td><?php echo $user['User']['created']; ?></td>
-                    <td><?php echo $user['User']['modified']; ?></td>
+                    <td><?= $user['User']['id']; ?></td>
+                    <td><?= $user['User']['username']; ?></td>
+                    <td><?= $user['User']['password']; ?></td>
+                    <td><?= $user['User']['role']; ?></td>
+                    <td><?= $user['User']['created']; ?></td>
+                    <td><?= $user['User']['modified']; ?></td>
                     <td>
-                    <?php
-                        echo $this->Html->link('編集',
-                          array('controller' => 'users', 'action' => 'edit/'.$user['User']['id']),
-                          array('class' => 'btn'));
-                        echo $this->Html->link('削除',
-                          array('controller' => 'users', 'action' => 'delete/'.$user['User']['id']),
-                          array('class' => 'btn'));
-                    ?>
+                        <a href="<?=$this->Html->url(['action' => 'edit',$user['User']['id']]);?>" class="btn btn-info">編集</a>
+                        <a href="<?=$this->Html->url(['action' => 'delete',$user['User']['id']]);?>" class="btn btn-danger">削除</a>
                     </td>
                 </tr>
             <?php endforeach; ?>
