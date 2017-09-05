@@ -122,3 +122,5 @@ CakeLog::config('error', array(
 	'file' => 'error',
 ));
 CakePlugin::load(array('DebugKit', 'TwitterBootstrap'));
+
+Configure::load("app_config.php");
