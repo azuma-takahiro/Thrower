@@ -7,14 +7,23 @@ App::uses('AppController', 'Controller');
  * WEBページ用コントローラーの共通処理はここに書く
  */
  class GeneralController extends AppController {
-     public $extra_components    = [];
-     public $extra_uses          = [];
-     public $extra_helpers       = [];
+     public $components = [
+         'DebugKit.Toolbar',
+     ];
 
-     public function __constract() {
-         parent:: __constract();
-         $this->__mergeExtra();
-     }
+     public $helpers = [
+         'Session',
+         'Html' => ['className' => 'TwitterBootstrap.BootstrapHtml'],
+         'Form' => ['className' => 'TwitterBootstrap.BootstrapForm'],
+         'Paginator' => ['className' => 'TwitterBootstrap.BootstrapPaginator'],
+      ];
+
+      public $uses = [];
+
+    //  public function __constract() {
+    //      parent:: __constract();
+    //      $this->__mergeExtra();
+    //  }
 
      public function beforeFilter() {
          parent::beforeFilter();
@@ -28,9 +37,9 @@ App::uses('AppController', 'Controller');
          // $this->Auth->loginRedirect = '/admin_top';
      }
 
-     private function __mergeExtra() {
-         $this->components = array_merge($this->components, $this->extra_components);
-         $this->uses = array_merge($this->uses, $this->extra_uses);
-         $this->helpers = array_merge($this->helpers, $this->extra_helpers);
-     }
+    //  private function __mergeExtra() {
+    //      $this->components = array_merge($this->components, $this->extra_components);
+    //      $this->uses = array_merge($this->uses, $this->extra_uses);
+    //      $this->helpers = array_merge($this->helpers, $this->extra_helpers);
+    //  }
  }
