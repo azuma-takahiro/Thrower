@@ -99,6 +99,18 @@ Configure::write('Dispatcher.filters', array(
  * Configures default file logging options
  */
 App::uses('CakeLog', 'Log');
+App::build(array(
+	'Controller' => array(
+		ROOT.DS.APP_DIR.DS.'Controller'.DS,
+		ROOT.DS.APP_DIR.DS.'Controller'.DS.'Admin'.DS,
+		ROOT.DS.APP_DIR.DS.'Controller'.DS.'General'.DS,
+	),
+	'View' => array(
+        ROOT.DS.APP_DIR.DS.'View'.DS,
+        ROOT.DS.APP_DIR.DS.'View'.DS.'Admin'.DS,
+        ROOT.DS.APP_DIR.DS.'View'.DS.'General'.DS,
+    ),
+));
 CakeLog::config('debug', array(
 	'engine' => 'File',
 	'types' => array('notice', 'info', 'debug'),
@@ -109,4 +121,6 @@ CakeLog::config('error', array(
 	'types' => array('warning', 'error', 'critical', 'alert', 'emergency'),
 	'file' => 'error',
 ));
-CakePlugin::load('DebugKit');
+CakePlugin::load(array('DebugKit', 'TwitterBootstrap'));
+
+Configure::load("app_config.php");
