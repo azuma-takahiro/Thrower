@@ -2,10 +2,10 @@
 
 App::uses('GeneralController', 'Controller');
 
-class InquiriesController extends AdminController {
-    public $extra_uses          = [
+class InquiriesController extends GeneralController {
+    public $uses          = [
         'Inquiry',
     ];
-    public $extra_components    = [];
-    public $extra_helpers       = [];
+    public $components    = [];
+    public $helpers       = [];
 }
