@@ -12,7 +12,7 @@ class AdminController extends AppController {
     // public $extra_helpers       = [];
 
     public $components = [
-        'DebugKit.Toolbar',
+        // 'DebugKit.Toolbar',
     ];
 
     public $helpers = [
