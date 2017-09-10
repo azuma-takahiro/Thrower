@@ -3,9 +3,16 @@
 App::uses('AdminController', 'Controller');
 
 class AdminOrderDetailsController extends AdminController {
-    public $extra_uses          = [
+    public $uses          = [
         'OrderDetail',
     ];
-    public $extra_components    = [];
-    public $extra_helpers       = [];
+    public $components    = [
+        'Flash'];
+    public $helpers       = [];
+
+
+    public function index() {
+        $orderdetails = $this->OrderDetail->getOrderDetailList();
+        $this->set('orderdetails', $orderdetails);
+    }
 }
