@@ -1,4 +1,3 @@
-<a href="<?=$this->Html->url(['action' => 'edit']);?>" class="btn btn-primary">登録</a>
 <?php if (!empty($orderdetails)): ?>
 <table class="table table-striped table-hover">
     <thead>
