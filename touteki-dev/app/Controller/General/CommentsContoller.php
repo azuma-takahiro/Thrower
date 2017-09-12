@@ -8,4 +8,8 @@ class CommentsController extends GeneralController {
     ];
     public $components    = [];
     public $helpers       = [];
+
+    public function add() {
+        
+    }
 }

@@ -8,4 +8,8 @@ class InquiriesController extends GeneralController {
     ];
     public $components    = [];
     public $helpers       = [];
+
+    public function add() {
+        
+    }
 }
