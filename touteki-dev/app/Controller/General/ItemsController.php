@@ -8,4 +8,17 @@ class ItemsController extends GeneralController {
     ];
     public $components    = [];
     public $helpers       = [];
+
+    public function top() {
+
+    }
+
+    public function index() {
+
+    }
+
+    public function detail($id = null) {
+
+    }
+    
 }
