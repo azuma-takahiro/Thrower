@@ -32,7 +32,7 @@
                     <td><?= $customer['Customer']['address1']; ?></td>
                     <td><?= $customer['Customer']['address2']; ?></td>
                     <td><?= $customer['Customer']['phone_number']; ?></td>
-                    <td><?= $prime_flg[$customer['Customer']['prime_flg']]; ?></td>
+                    <td><?= $primeFlg[$customer['Customer']['prime_flg']]; ?></td>
                     <td><?= $customer['Customer']['created']; ?></td>
                     <td><?= $customer['Customer']['modified']; ?></td>
                     <td><a href="<?= $this->Html->url(['action' => 'edit',$customer['Customer']['id']]);?>" class="btn btn-info">編集</a></td>

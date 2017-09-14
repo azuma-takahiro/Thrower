@@ -15,7 +15,7 @@ class AdminCustomersController extends AdminController {
         1 => "男性",
         2 => "女性"
     ];
-    public $prime_flg = [
+    public $primeFlg = [
         1 => "通常会員",
         2 => "プ◯イム会員"
     ];
@@ -30,7 +30,7 @@ class AdminCustomersController extends AdminController {
         $this->set('customers',$customers);
 
         $this->set('gender',$this->gender);
-        $this->set('prime_flg',$this->prime_flg);
+        $this->set('primeFlg',$this->primeFlg);
     }
 
     // public function add() {
@@ -65,7 +65,7 @@ class AdminCustomersController extends AdminController {
             unset($this->request->data['Customer']['password']);
         }
         $this->set('gender',$this->gender);
-        $this->set('prime_flg',$this->prime_flg);
+        $this->set('primeFlg',$this->primeFlg);
     }
 
     public function delete($id = null) {

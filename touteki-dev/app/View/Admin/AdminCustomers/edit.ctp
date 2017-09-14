@@ -35,10 +35,10 @@
     <?= $this->Form->input('phone_number',array(
         'label' => '電話番号',
         'class' => 'form-control')); ?>
-    <?= $this->Form->input('prime-flg',array(
+    <?= $this->Form->input('prime_flg',array(
         'label' => '会員区分',
         'type' => 'select',
-        'options' => $prime_flg,
+        'options' => $primeFlg,
         'class' => 'form-control')); ?>
     <?= $this->Form->input('created',array(
         'label' => '作成日時')); ?>
