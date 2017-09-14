@@ -2,10 +2,23 @@
 
 App::uses('GeneralController', 'Controller');
 
-class ItemsController extends AdminController {
-    public $extra_uses          = [
+class ItemsController extends GeneralController {
+    public $uses          = [
         'Item',
     ];
-    public $extra_components    = [];
-    public $extra_helpers       = [];
+    public $components    = [];
+    public $helpers       = [];
+
+    public function top() {
+
+    }
+
+    public function index() {
+
+    }
+
+    public function detail($id = null) {
+
+    }
+    
 }

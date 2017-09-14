@@ -8,7 +8,7 @@ App::uses('AppController', 'Controller');
  */
  class GeneralController extends AppController {
      public $components = [
-         'DebugKit.Toolbar',
+        //  'DebugKit.Toolbar',
      ];
 
      public $helpers = [

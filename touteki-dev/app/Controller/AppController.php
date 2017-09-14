@@ -7,9 +7,9 @@ App::uses('Controller', 'Controller');
  * $components,$helpers,$usesの定義は不可
  */
 class AppController extends Controller {
-    // public $components = [
-    //     'DebugKit.Toolbar',
-    // ];
+    public $components = [
+        'DebugKit.Toolbar',
+    ];
     //
     // public $helpers = [
     //        'Session',
