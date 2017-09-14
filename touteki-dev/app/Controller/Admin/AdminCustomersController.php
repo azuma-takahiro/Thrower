@@ -11,8 +11,14 @@ class AdminCustomersController extends AdminController {
         'Flash'
     ];
 
-    public $gender = ["男性","女性"];
-    public $prime_flg = ["通常会員","プ◯イム会員"];
+    public $gender = [
+        0 => "男性",
+        1 => "女性"
+    ];
+    public $prime_flg = [
+        0 => "通常会員",
+        1 => "プ◯イム会員"
+    ];
 
     public function beforeFilter() {
         parent::beforeFilter();
