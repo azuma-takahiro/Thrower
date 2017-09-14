@@ -33,6 +33,8 @@ class AdminInquiriesController extends AdminController {
             } else {
                 $this->Flash->error(__('保存に失敗しました。'));
             }
+        } else {
+            $this->request->data = $this->Inquiry->findById($id);
         }
     }
 

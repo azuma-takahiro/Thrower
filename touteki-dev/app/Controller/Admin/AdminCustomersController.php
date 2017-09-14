@@ -12,12 +12,12 @@ class AdminCustomersController extends AdminController {
     ];
 
     public $gender = [
-        0 => "男性",
-        1 => "女性"
+        1 => "男性",
+        2 => "女性"
     ];
     public $prime_flg = [
-        0 => "通常会員",
-        1 => "プ◯イム会員"
+        1 => "通常会員",
+        2 => "プ◯イム会員"
     ];
 
     public function beforeFilter() {
