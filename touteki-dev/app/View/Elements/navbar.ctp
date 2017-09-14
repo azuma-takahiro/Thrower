@@ -18,7 +18,7 @@
             <li class="<?= $this->name === 'AdminItems' ? 'active' : '' ?>"><a href="/AdminItems">商品管理</a></li>
             <li class="<?= $this->name === 'AdminOrderDetails' ? 'active' : '' ?>"><a href="/AdminOrderDetails">受注管理</a></li>
             <li class="<?= $this->name === 'AdminComments' ? 'active' : '' ?>"><a href="/AdminComments">レビュー管理</a></li>
-            <li class="<?= $this->name === 'AdminInquiry' ? 'active' : '' ?>"><a href="AdminInquiry">お問い合わせ管理</a></li>
+            <li class="<?= $this->name === 'AdminInquiry' ? 'active' : '' ?>"><a href="AdminInquiries">お問い合わせ管理</a></li>
         </ul>
     </div>
 </nav>
