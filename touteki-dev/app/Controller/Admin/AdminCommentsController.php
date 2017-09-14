@@ -59,6 +59,33 @@ class AdminCommentsController extends AdminController {
         }
     }
 
+        /**
+     * 削除用メソッド
+     * @param  [type] $id [description]
+     * @return [type]     [description]
+     */
+    public function delete($id = null) {
+        // id がないことはありえないのでエラーを吐き出す
+        if (!$id) {
+            throw new ForbiddenException;
+            return;
+        }
+        // Userモデルにidをセット
+        $this->Comment->id = $id;
+
+        // saveFieldで１カラムだけの変更。ここではdelete_flgカラムを指定して、論理削除を行う
+        $this->Comment->saveField('delete_flg', 1);
+
+        // メッセージ用変数に格納
+        $msg = sprintf('レビュー ID:%sを削除しました。',$id);
+
+        // Flashコンポーネントを使用してメッセージの表示
+        $this->Flash->set($msg);
+
+        // indexへリダイレクト
+        $this->redirect(['action'=>'index']);
+    }
+
 
 
 }
