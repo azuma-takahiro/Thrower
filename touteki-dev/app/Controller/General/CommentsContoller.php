@@ -2,10 +2,14 @@
 
 App::uses('GeneralController', 'Controller');
 
-class CommentsController extends AdminController {
-    public $extra_uses          = [
+class CommentsController extends GeneralController {
+    public $uses          = [
         'Comment',
     ];
-    public $extra_components    = [];
-    public $extra_helpers       = [];
+    public $components    = [];
+    public $helpers       = [];
+
+    public function add() {
+        
+    }
 }

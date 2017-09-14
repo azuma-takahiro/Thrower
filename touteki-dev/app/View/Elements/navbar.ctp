@@ -13,12 +13,12 @@
 
     <div id="gnavi" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-            <li><a href="">管理者管理</a></li>
-            <li><a href="">顧客管理</a></li>
-            <li><a href="">商品管理</a></li>
-            <li><a href="">受注管理</a></li>
-            <li><a href="">レビュー管理</a></li>
-            <li><a href="">お問い合わせ管理</a></li>
+            <li class="<?= $this->name === 'AdminUsers' ? 'active' : '' ?>" ><a href="/AdminUsers">管理者管理</a></li>
+            <li class="<?= $this->name === 'AdminCustomers' ? 'active' : '' ?>"><a href="/AdminCustomers">顧客管理</a></li>
+            <li class="<?= $this->name === 'AdminItems' ? 'active' : '' ?>"><a href="/AdminItems">商品管理</a></li>
+            <li class="<?= $this->name === 'AdminOrderDetails' ? 'active' : '' ?>"><a href="/AdminOrderDetails">受注管理</a></li>
+            <li class="<?= $this->name === 'AdminComments' ? 'active' : '' ?>"><a href="/AdminComments">レビュー管理</a></li>
+            <li class="<?= $this->name === 'AdminInquiry' ? 'active' : '' ?>"><a href="AdminInquiry">お問い合わせ管理</a></li>
         </ul>
     </div>
 </nav>
