@@ -55,7 +55,7 @@ class AdminInquiriesController extends AdminController {
     //  // お問い合わせの入力フォームからの情報を受け取る
     //     if($this->request->onlyAllow('post','put')) {
     //         $this->Inquiry->create();
-    //         if($this->Inquiry->sava($this->request->data)) {
+    //         if($this->Inquiry->save($this->request->data)) {
     //             $this->Flash->success(__('お問い合わせありがとうございます'));
     //             // どこに飛ばすか明確ではないが、indexに飛ばす。
     //             return $this->redirect(array('action' => 'index'));
