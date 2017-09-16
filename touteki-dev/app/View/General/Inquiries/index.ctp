@@ -1,5 +1,5 @@
 <div class = "仮">
-    <?= $this->Form->create('Inquiry',['url' => 'Inquiries','action' => 'index']); ?>
+    <?= $this->Form->create('Inquiry',['url' => ['controller' => 'Inquiries','action' => 'index']]); ?>
     <?= $this->Form->input('customer_id',array(
         'label' => '会員ID',
         'type' => 'text')); ?>

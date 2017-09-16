@@ -27,9 +27,6 @@ class OrdersController extends GeneralController {
             } else {
                 $this->Flash->error(__('登録に失敗しました、もう一度確認してください。'));
             }
-        } else {
-            throw new MethodNotAllowedException;
-            return;
         }
     }
 }

@@ -1,6 +1,8 @@
 <div class = "仮">
-    <?= $this->Form->create('customer_id',array(
-        'label' => '会員ID')); ?>
+    <?= $this->Form->create('Order',['url' => ['contrller' => 'Inquiries','action' => 'index']]) ;?>
+    <?= $this->Form->input('customer_id',array(
+        'label' => '会員ID',
+        'type' => 'text')); ?>
     <?= $this->Form->input('credit_number',array(
         'label' => 'credit_number')); ?>
     <?= $this->Form->input('destination_name',array(

@@ -27,9 +27,6 @@ class InquiriesController extends GeneralController {
             } else {
                 $this->Flash->error(__('投稿に失敗しました。もう一度確認してください。'));
             }
-        } else {
-            throw new MethodNotAllowedException;
-            return;
         }
     }
 }
