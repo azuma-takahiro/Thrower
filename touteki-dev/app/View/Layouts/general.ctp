@@ -40,7 +40,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 <body>
 	<div id="container">
 		<div id="header">
-			<!-- <?php echo $this->element('navbar'); ?> -->
+			<?php echo $this->element('navbar'); ?>
 		</div>
 		<div id="content">
 
