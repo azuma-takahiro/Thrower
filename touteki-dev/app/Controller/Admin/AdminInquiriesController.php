@@ -13,11 +13,14 @@ class AdminInquiriesController extends AdminController {
 
     public function beforeFilter() {
         parent::beforeFilter();
+
+        $inquiry_category = configure::read('inquiry_category');
+        $this->set('inquiry_category',$inquiry_category);
     }
 
 
     public function index() {
-        $inquiries = $this->Inquiry->find('all');
+        $inquiries = $this->Inquiry->getInquiryList();
         $this->set('inquiries',$inquiries);
     }
 

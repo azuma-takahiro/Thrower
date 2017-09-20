@@ -11,26 +11,26 @@ class AdminCustomersController extends AdminController {
         'Flash'
     ];
 
-    public $gender = [
-        1 => "男性",
-        2 => "女性"
-    ];
-    public $primeFlg = [
-        1 => "通常会員",
-        2 => "プ◯イム会員"
-    ];
 
     public function beforeFilter() {
         parent::beforeFilter();
+
+        $gender = configure::read('gender');
+        $this->set('gender', $gender);
+
+        $prefecture = configure::read('prefecture');
+        $this->set('prefecture', $prefecture);
+
+        $prime_flg = configure::read('prime_flg');
+        $this->set('prime_flg', $prime_flg);
+
     }
 
     public function index() {
         // $list = 顧客一覧
-        $customers = $this->Customer->find('all');
+        $customers = $this->Customer->getCustomerList();
         $this->set('customers',$customers);
 
-        $this->set('gender',$this->gender);
-        $this->set('primeFlg',$this->primeFlg);
     }
 
     // public function add() {
@@ -64,8 +64,7 @@ class AdminCustomersController extends AdminController {
             $this->request->data = $this->Customer->findById($id);
             unset($this->request->data['Customer']['password']);
         }
-        $this->set('gender',$this->gender);
-        $this->set('primeFlg',$this->primeFlg);
+
     }
 
     public function delete($id = null) {

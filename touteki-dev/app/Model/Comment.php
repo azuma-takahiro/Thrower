@@ -8,6 +8,7 @@ App::uses('AppModel', 'Model');
  */
 class Comment extends AppModel {
 
+    public $belongsTo = array('Customer','Item');
 
     public $validate = [
         'customer_id' => [
@@ -46,6 +47,12 @@ class Comment extends AppModel {
             'Comment.comment',
             'Comment.created',
             'Comment.modified',
+            'Customer.id',
+            'Customer.first_name',
+            'Customer.last_name',
+            'Item.id',
+            'Item.item_category',
+            'Item.item_name',
         ];
 
         $conditions = [

@@ -23,6 +23,9 @@ class AdminItemsController extends AdminController {
         parent::beforeFilter();
         // $this->Auth->allow('add', 'logout');
         // $this->set('uri_segment', explode('/', $_SERVER['REQUEST_URI']));
+
+        $item_category = configure::read('item_category');
+        $this->set('item_category',$item_category);
     }
 
     /**

@@ -6,14 +6,15 @@
         'type' => 'text')); ?>
     <?= $this->Form->input('inquiry_category',array(
         'label' => 'お問い合わせ種類',
+        'options' => $inquiry_category,
         'class' => 'form-control')); ?>
     <?= $this->Form->input('content',array(
         'label' => '内容',
         'class' => 'form-control')); ?>
-    <?= $this->Form->input('created',array(
-        'label' => '作成日時')); ?>
-    <?= $this->Form->input('modified',array(
-        'label' => '更新日時')); ?>
     <?= $this->Form->hidden('id'); ?>
-    <?= $this->Form->end(__('更新')); ?>
+        <div style="margin-top: 10px; text-align: center;">
+        <a href="/AdminInquiries/" class="btn btn-default">戻る</a>
+        <button type="submit" class="btn btn-primary">更新</button>
+        </div>
+    <?= $this->Form->end(); ?>
 </div>

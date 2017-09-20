@@ -1,50 +1,63 @@
+<script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
+
 <div class = "customers form">
     <?= $this->Form->create('Customer',['url' => ['controller' => 'AdminCustomers','action' => 'edit']]); ?>
-    <?= $this->Form->input('first_name',array(
-        'label' => '名前',
-        'class' => 'form-control')); ?>
     <?= $this->Form->input('last_name',array(
-        'label' => '苗字',
+        'label' => '姓',
+        'style' => 'width: 150px',
         'class' => 'form-control')); ?>
-    <?= $this->Form->input('first_name_kana',array(
-        'label' => 'ふりがな',
+    <?= $this->Form->input('first_name',array(
+        'label' => '名',
+        'style' => 'width: 150px',
         'class' => 'form-control')); ?>
     <?= $this->Form->input('last_name_kana',array(
-        'label' => '',
+        'label' => '姓ふりがな',
+        'style' => 'width: 150px',
+        'class' => 'form-control')); ?>
+    <?= $this->Form->input('first_name_kana',array(
+        'style' => 'width: 150px',
+        'label' => '名ふりがな',
         'class' => 'form-control')); ?>
     <?= $this->Form->input('gender',array(
         'label' => '性別',
         'type' => 'select',
+        'style' => 'width: 80px',
         'options' => $gender,
         'class' => 'form-control')); ?>
     <?= $this->Form->input('email',array(
         'label' => 'メールアドレス',
         'class' => 'form-control')); ?>
     <?= $this->Form->input('postal_code',array(
-        'label' => '郵便番号',
-        'class' => 'form-control')); ?>
+        'label' => '郵便番号（※ハイフンなし7桁）',
+        'maxlength' => 7,
+        'style' => 'width: 100px',
+        'class' => 'form-control',
+        'onKeyUp' => "AjaxZip3.zip2addr(this,'','data[Customer][prefecture]','data[Customer][address1]');")); ?>
     <?= $this->Form->input('prefecture',array(
         'label' => '都道府県',
+        'style' => 'width:200px',
+        'options' => $prefecture,
         'class' => 'form-control')); ?>
     <?= $this->Form->input('address1',array(
-        'label' => '市区町村',
+        'label' => '住所',
         'class' => 'form-control')); ?>
     <?= $this->Form->input('address2',array(
-        'label' => '番地・建物名',
+        'label' => '建物名',
         'class' => 'form-control')); ?>
     <?= $this->Form->input('phone_number',array(
-        'label' => '電話番号',
+        'label' => '電話番号（※ハイフンなし）',
+        'maxlength' => 11,
         'class' => 'form-control')); ?>
     <?= $this->Form->input('prime_flg',array(
         'label' => '会員区分',
         'type' => 'select',
-        'options' => $primeFlg,
+        'style' => 'width:150px',
+        'options' => $prime_flg,
         'class' => 'form-control')); ?>
-    <?= $this->Form->input('created',array(
-        'label' => '作成日時')); ?>
-    <?= $this->Form->input('modified',array(
-        'label' => '更新日時')); ?>
     <?= $this->Form->hidden('id'); ?>
-    <?= $this->Form->end(__('更新')); ?>
-
+        <div style="margin-top: 10px; text-align: center;">
+        <a href="/AdminCustomers/" class="btn btn-default">戻る</a>
+        <button type="submit" class="btn btn-primary">更新</button>
+        </div>
+    <?= $this->Form->end(); ?>
 </div>
