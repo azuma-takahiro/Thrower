@@ -20,6 +20,7 @@ $config['inquiry_category'] = [
 
 //Customer・Order　都道府県
 $config['prefecture'] = [
+    0 => '選択してください',
     1 => '北海道',
     2 => '青森県',
     3 => '岩手県',
@@ -72,7 +73,7 @@ $config['prefecture'] = [
 //Customer　性別
 $config['gender'] = [
     1 => '男性',
-    2 => '女性'
+    2 => '女性',
     ];
 
 //Customer　会員ランク
@@ -83,6 +84,7 @@ $config['prime_flg'] = [
 
 //Item　商品分類
 $config['item_category'] = [
+    0 => '',
     1 => '砲丸',
     2 => '円盤',
     3 => '槍',

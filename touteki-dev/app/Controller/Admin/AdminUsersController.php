@@ -25,6 +25,9 @@ class AdminUsersController extends AdminController {
         parent::beforeFilter();
         // $this->Auth->allow('add', 'logout');
         // $this->set('uri_segment', explode('/', $_SERVER['REQUEST_URI']));
+
+        $role = configure::read('Roles');
+        $this->set('role',$role);
     }
 
     /**

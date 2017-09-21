@@ -7,6 +7,7 @@ App::uses('AppModel', 'Model');
  * @author
  */
 class Customer extends AppModel {
+    public $hasMany = array('Order','Inquiry','Comment');
 
     public $validate = [
         'last_name' => [
@@ -47,7 +48,7 @@ class Customer extends AppModel {
         ],
         'postal_code' => [
             'required' => [
-                'rule' => 'notBlank',
+                'rule' => array('notBlank','postal'),
                 'message' => '入力必須です',
             ],
         ],
@@ -71,5 +72,20 @@ class Customer extends AppModel {
         ],
 
     ];
+
+    public function getCustomerList() {
+
+        $recursive = 0;
+
+        $conditions = [
+            'Customer.delete_flg' => 0,
+        ];
+
+        $order = [
+            'Customer.id DESC'
+        ];
+
+        return $this->find('all', compact('recursive', 'conditions','order'));
+    }
 
 }

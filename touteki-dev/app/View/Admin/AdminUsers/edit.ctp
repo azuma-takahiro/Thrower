@@ -5,10 +5,10 @@
         <?php endif;?>
         <?=$this->Form->input('username', array('class' => 'form-control'));?>
         <?=$this->Form->input('password', array('class' => 'form-control'));?>
-        <?=$this->Form->input('role', ['options' => Configure::read('Roles'),'class' => 'form-control']);?>
+        <?=$this->Form->input('role', ['options' => $role,'class' => 'form-control']);?>
         <div style="margin-top: 10px; text-align: center;">
             <a href="/AdminUsers/" class="btn btn-default">戻る</a>
-            <button type="submit" class="btn btn-primary">保存</button>
+            <button type="submit" class="btn btn-primary">更新</button>
         </div>
     <?php echo $this->Form->end(); ?>
 </div>

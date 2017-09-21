@@ -1,43 +1,32 @@
-<table class="table table-striped table-hover">
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>名前</th>
-            <th>かな</th>
-            <th>gender</th>
-            <th>email</th>
-            <th>postal_code</th>
-            <th>prefecture</th>
-            <th>address1</th>
-            <th>address2</th>
-            <th>phone_number</th>
-            <th>prime_flg</th>
-            <th>created</th>
-            <th>modified</th>
-            <th>edit</th>
-            <th>delete</th>
-        </tr>
-    </thead>
+<?php echo $this->Html->css('customer'); ?>
+<table class="table table-bordered" width = "100%">
     <tbody>
         <?php if(!empty($customers)) : ?>
             <?php foreach($customers as $customer) : ?>
                 <tr>
-                    <td><?= $customer['Customer']['id']; ?></td>
-                    <td><?= $customer['Customer']['last_name']; ?><?= $customer['Customer']['first_name']; ?></td>
-                    <td><?= $customer['Customer']['last_name_kana']; ?><?= $customer['Customer']['first_name_kana']; ?></td>
-                    <td><?= $gender[$customer['Customer']['gender']]; ?></td>
-                    <td><?= $customer['Customer']['email']; ?></td>
-                    <td><?= $customer['Customer']['postal_code']; ?></td>
-                    <td><?= $customer['Customer']['prefecture']; ?></td>
-                    <td><?= $customer['Customer']['address1']; ?></td>
-                    <td><?= $customer['Customer']['address2']; ?></td>
-                    <td><?= $customer['Customer']['phone_number']; ?></td>
-                    <td><?= $primeFlg[$customer['Customer']['prime_flg']]; ?></td>
-                    <td><?= $customer['Customer']['created']; ?></td>
-                    <td><?= $customer['Customer']['modified']; ?></td>
-                    <td><a href="<?= $this->Html->url(['action' => 'edit',$customer['Customer']['id']]);?>" class="btn btn-info">編集</a></td>
-                    <td><a href="<?= $this->Html->url(['action' => 'delete',$customer['Customer']['id']]); ?>" class="btn btn-danger">削除</a></td>
+                    <td rowspan="2" width = "3%"><?= h($customer['Customer']['id']); ?></td>
+                    <td colspan="2"><?= h($customer['Customer']['last_name']); ?>&nbsp;<?= h($customer['Customer']['first_name']); ?></td>
+                    <td colspan="7" width = "13%"><?= h($customer['Customer']['last_name_kana']); ?>&nbsp;<?= h($customer['Customer']['first_name_kana']); ?></td>
+                    <td width = "5%"><?php echo strtr(h($customer['Customer']['gender']), $gender) ?></td>
+                    <td width = "10%"><?php echo strtr(h($customer['Customer']['prime_flg']),$prime_flg) ?></td>
+                    <th width = "5%">email</th>
+                    <td colspan="3"><?= h($customer['Customer']['email']); ?></td>
+                    <th width = "5%">登録日</th>
+                    <td width = "12%"><?= h($customer['Customer']['created']); ?></td>
+                    <td rowspan="2" width = "5%"><a href="<?= $this->Html->url(['action' => 'edit',h($customer['Customer']['id'])]);?>" class="btn btn-info">編集</a></td>
+                    <td rowspan="2" width = "5%"><a href="<?= $this->Html->url(['action' => 'delete',h($customer['Customer']['id'])]); ?>" class="btn btn-danger">削除</a></td>
                 </tr>
+                <tr>
+                    <th width = "6%">郵便番号</th>
+                    <td width = "7%"><?= h($customer['Customer']['postal_code']); ?></td>
+                    <th width = "3%">住所</th>
+                    <td colspan="10"><?php echo strtr(h($customer['Customer']['prefecture']), $prefecture) ?>&nbsp;<?= h($customer['Customer']['address1']); ?>&nbsp;<?= h($customer['Customer']['address2']); ?>&nbsp;</td>
+                    <th width = "6%">電話番号</th>
+                    <td width = "10%"><?= h($customer['Customer']['phone_number']); ?></td>
+                    <th>更新日</th>
+                    <td><?= h($customer['Customer']['modified']); ?></td>
+                </tr>
+                </div>
             <?php endforeach; ?>
         <?php endif; ?>
     </tbody>

@@ -2,9 +2,9 @@
 
 App::uses('AdminController', 'Controller');
 
-class AdminOrderDetailsController extends AdminController {
+class AdminOrdersController extends AdminController {
     public $uses          = [
-        'OrderDetail',
+        'Order',
     ];
     public $components    = [
         'Flash'];
@@ -17,20 +17,14 @@ class AdminOrderDetailsController extends AdminController {
     }
 
     public function index() {
-        $id = $this->request->pass[0];
-        $options = array(
-            'conditions' => array(
-                'OrderDetail.order_id' => $id),
-                'OrderDetail.delete_flg' => 0,
-            );
-        $orderdetails = $this->OrderDetail->find('all', $options);
-        $this->set('orderdetails', $orderdetails);
+        $orders = $this->Order->getOrderList();
+        $this->set('orders', $orders);
     }
 
     public function edit($id = null) {
         if(!empty($id)) {
-            $orderdetails = $this->OrderDetail->    findById($id);
-            $this->request->data = $orderdetails;
+            $orders = $this->Order->findById($id);
+            $this->request->data = $orders;
         }
     }
 
@@ -39,15 +33,15 @@ class AdminOrderDetailsController extends AdminController {
             $data = $this->request->data;
 
             if(empty($data['id'])) {
-                $this->OrderDetail->create();
+                $this->Order->create();
             } else {
-                $this->OrderDetail->id = $data['id'];
+                $this->Order->id = $data['id'];
             }
 
-            $this->OrderDetail->set($data);
+            $this->Order->set($data);
 
-            if($this->OrderDetail->validates()) {
-                $this->OrderDetail->save($data);
+            if($this->Order->validates()) {
+                $this->Order->save($data);
                 $this->Flash->success(__('保存完了しました'));
                 $this->redirect(['action' => 'index']);
             } else {
@@ -65,9 +59,9 @@ class AdminOrderDetailsController extends AdminController {
             throw new ForbiddenException;
             return;
         }
-        $this->OrderDetail->id = $id;
+        $this->Order->id = $id;
 
-        $this->OrderDetail->saveField('delete_flg', 1);
+        $this->Order->saveField('delete_flg', 1);
 
         $msg = sprintf('受注 ID:%sを削除しました。',$id);
 
