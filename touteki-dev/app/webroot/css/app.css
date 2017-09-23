@@ -4,6 +4,9 @@
         display:none;
     }
 }
+li{
+    list-style: none;
+}
 
 img{
     width: 100%;
@@ -14,7 +17,6 @@ footer {
   text-align: center;
   background-color: #101010;
 }
-
 .container{
     padding-top: 140px;
 }
