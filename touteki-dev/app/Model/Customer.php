@@ -57,12 +57,6 @@ class Customer extends AppModel {
                 'message' => '入力必須です',
             ],
         ],
-        'address2' => [
-            'required' => [
-                'rule' => 'notBlank',
-                'message' => '入力必須です',
-            ],
-        ],
         'phone_number' => [
             'required' => [
                 'rule' => 'notBlank',
