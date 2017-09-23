@@ -14,3 +14,17 @@ footer {
   text-align: center;
   background-color: #101010;
 }
+
+/*customer*/
+th.required:after {
+    content: "必須";
+    padding: 1px 6px;
+    background: #FFB74D;
+    float: right;
+    border-radius: 3px;
+    color: #ffffff;
+    font-weight: 100;
+}
+#CustomerGender2{
+    margin-left: 5px;
+}
