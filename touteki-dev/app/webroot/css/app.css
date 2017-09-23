@@ -1,0 +1,16 @@
+@media screen and (max-width: 767px) {
+    /* 767pxまでの幅の場合に適応される */
+    .mb-none {
+        display:none;
+    }
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+footer {
+  text-align: center;
+  background-color: #101010;
+}

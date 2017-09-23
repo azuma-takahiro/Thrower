@@ -8,6 +8,8 @@ App::uses('AppModel', 'Model');
  */
 class Item extends AppModel {
 
+    public $hasMany = array('Comment','OrderDetail');
+
     public $validate = [
         // urlのみ許可
         'picture_url' => [
