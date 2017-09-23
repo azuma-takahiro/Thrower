@@ -1,6 +1,5 @@
 <div class="container">
-
-    <div class='container container-large bg-success'>
+    <div class='container-large bg-success'>
         <div class='row'> 
             <p class='bg-success'>
                 <ul>
