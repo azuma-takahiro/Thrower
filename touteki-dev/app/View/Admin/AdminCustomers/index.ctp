@@ -1,4 +1,5 @@
 <?php echo $this->Html->css('customer'); ?>
+<a href="<?=$this->Html->url(['action' => 'edit']);?>" class="btn btn-primary">登録</a>
 <table class="table table-bordered" width = "100%">
     <tbody>
         <?php if(!empty($customers)) : ?>

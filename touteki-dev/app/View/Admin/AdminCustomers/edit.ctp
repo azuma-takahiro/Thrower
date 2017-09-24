@@ -1,7 +1,7 @@
 <script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
 
 <div class = "customers form">
-    <?= $this->Form->create('Customer',['url' => ['controller' => 'AdminCustomers','action' => 'edit']]); ?>
+    <?= $this->Form->create('Customer',['url' => ['controller' => 'AdminCustomers','action' => 'save']]); ?>
     <?= $this->Form->input('last_name',array(
         'label' => '姓',
         'style' => 'width: 150px',
@@ -55,6 +55,7 @@
         'options' => $prime_flg,
         'class' => 'form-control')); ?>
     <?= $this->Form->hidden('id'); ?>
+
         <div style="margin-top: 10px; text-align: center;">
         <a href="/AdminCustomers/" class="btn btn-default">戻る</a>
         <button type="submit" class="btn btn-primary">更新</button>
