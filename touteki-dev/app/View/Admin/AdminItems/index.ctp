@@ -3,7 +3,6 @@
     <thead>
         <tr>
             <th>ID</th>
-            <th>画像</th>
             <th>商品名</th>
             <th>商品カテゴリ</th>
             <th>メーカーID</th>
