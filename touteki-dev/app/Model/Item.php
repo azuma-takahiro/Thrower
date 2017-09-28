@@ -12,13 +12,13 @@ class Item extends AppModel {
 
     public $validate = [
         // urlのみ許可
-        'picture_url' => [
-            'string' => [
-                'vaidate1' => [
-                    'rule' => ['url', true],
-                ],
-            ],
-        ],
+        // 'picture_url' => [
+        //     'string' => [
+        //         'vaidate1' => [
+        //             'rule' => ['url', true],
+        //         ],
+        //     ],
+        // ],
     ];
 
  /**
