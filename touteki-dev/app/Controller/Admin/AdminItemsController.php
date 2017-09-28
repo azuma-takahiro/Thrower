@@ -76,11 +76,11 @@ class AdminItemsController extends AdminController {
                 $this->Item->id = $data['id'];
             }
 
-            //画像の保存
-            $path = include (dirname(__FILE__). '/../../webroot/img/item');
-            $image = $image = $this->request->data['Item']['img_name'];
-            // $this->Session->setFlash('画像を登録しました');
-            move_uploaded_file($image['tmp_name'],$path);
+            // //画像の保存
+            // $path = include (dirname(__FILE__). '/../../webroot/img/item');
+            // $image = $image = $this->request->data['Item']['img_name'];
+            // // $this->Session->setFlash('画像を登録しました');
+            // move_uploaded_file($image['tmp_name'],$path);
 
             // validationにかけるためにモデルにデータをセット
             $this->Item->set($data);
