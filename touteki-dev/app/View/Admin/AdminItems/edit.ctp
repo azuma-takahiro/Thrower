@@ -8,7 +8,7 @@
         <?=$this->Form->input('maker_id', array('label'=> 'メーカーID','class' => 'form-control'));?>
         <?=$this->Form->input('description', array('label' => '説明文', 'class' => 'form-control'));?>
         <?=$this->Form->input('price', array('label' => '価格', 'class' => 'form-control'));?>
-        <?=$this->form->input('Item.img_name', array('type'=>'file', 'label'=>'商品画像'));?>
+        <?=$this->Form->input('picture_url', array('label'=>'商品画像','class' => 'form-control'));?> 
 
         <div style="margin-top: 10px; text-align: center;">
             <a href="/AdminItems/" class="btn btn-default">戻る</a>
