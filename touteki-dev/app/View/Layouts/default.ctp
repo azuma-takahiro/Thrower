@@ -30,7 +30,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 
 		echo $this->Html->css('bootstrap.min');
 		echo $this->Html->css('font-awesome.min');
-		echo $this->Html->css('app');
+		echo $this->Html->css('admin');
 		
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
