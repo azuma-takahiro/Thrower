@@ -12,6 +12,7 @@ class AdminUsersController extends AdminController {
     // 使用コンポーネント
     public $components    = [
         'Flash',
+        'Paginator'
     ];
 
     // 使用ヘルパー
@@ -30,13 +31,31 @@ class AdminUsersController extends AdminController {
         $this->set('role',$role);
     }
 
+    // public $paginate = array(
+    //     'limit' => 10,
+    //     'order' => array(
+    //         'User.id' => 'DESC'
+    //     ),
+    //     'conditions' => array(
+    //         'User.delete_flg' => 0
+    //     ),
+    // );
+
     /**
      * Indexページ表示用メソッド
      * @return [type] [description]
      */
     public function index() {
-        // Userモデルで定義したのgetUserListメソッドを使用して一覧を取得
-        $users = $this->User->getUserList();
+        $this->Paginator->settings = array(
+            'limit' => 20,
+            'order' => array(
+                'User.id' => 'DESC'
+            ),
+            'conditions' => array(
+                'User.delete_flg' => 0
+            ),
+        );
+        $users = $this->Paginator->paginate();
         // 変数$usersをviewで使えるようにセット
         $this->set('users', $users);
     }

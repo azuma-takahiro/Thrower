@@ -26,6 +26,7 @@ class User extends AppModel {
             ],
         ],
     ];
+
     /**
      * Userテーブル一覧を取得
      * @return array $users
@@ -43,14 +44,14 @@ class User extends AppModel {
             'User.modified',
         ];
 
-        $conditions = [
-            'User.delete_flg' => 0,
-        ];
+        // $conditions = [
+        //     'User.delete_flg' => 0,
+        // ];
 
-        $order = [
-            'User.id DESC'
-        ];
+        // $order = [
+        //     'User.id DESC'
+        // ];
 
-        return $this->find('all', compact('recursive', 'fields', 'conditions','order'));
+        return $this->paginate('User', compact('recursive', 'fields', 'conditions','order'));
     }
 }

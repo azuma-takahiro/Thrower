@@ -30,3 +30,7 @@
         <?php endif; ?>
     </tbody>
 </table>
+<?php echo $this->Paginator->counter(); ?><br/>
+<?php echo $this->Paginator->prev('前へ'); ?>
+<?php echo $this->Paginator->numbers(); ?>
+<?php echo $this->Paginator->next('次へ'); ?>
