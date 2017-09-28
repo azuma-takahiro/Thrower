@@ -1,0 +1,70 @@
+@media screen and (max-width: 767px) {
+    /* 767pxまでの幅の場合に適応される */
+    .mb-none {
+        display:none;
+    }
+}
+li{
+    list-style: none;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+footer {
+  text-align: center;
+  background-color: #101010;
+}
+.container{
+    padding-top: 140px;
+}
+
+/*top*/
+#gnavi_top #add,#gnavi_top #login{
+    display: inline-block;
+}
+#header .navbar-default{
+    background: #fdfbe2;
+    position: fixed;
+    width: 100%;
+}
+#header a{
+    color: #a37e52;
+    padding: 5px 15px;
+}
+.nav.navbar-nav li{
+    border-right: dotted 4px;
+}
+.nav.navbar-nav li a .fa-home{
+    font-size: 25px;
+    padding: 8px 15px;
+}
+.nav.navbar-nav li span{
+    font-size: 12px;
+}
+.nav.navbar-nav li:first-child{
+    border-left: dotted 4px;
+}
+.navbar-nav{
+    display: inline-block;
+    float: none;
+}
+
+#gnavi_bottom{
+    text-align: center;
+}
+/*customer*/
+th.required:after {
+    content: "必須";
+    padding: 1px 6px;
+    background: #FFB74D;
+    float: right;
+    border-radius: 3px;
+    color: #ffffff;
+    font-weight: 100;
+}
+#CustomerGender2{
+    margin-left: 5px;
+}
