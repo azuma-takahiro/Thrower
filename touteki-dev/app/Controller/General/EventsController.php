@@ -2,7 +2,7 @@
 
 App::uses('GeneralController', 'Controller');
 
-class CustomersController extends GeneralController {
+class EventsController extends GeneralController {
 
     public function index(){
         
