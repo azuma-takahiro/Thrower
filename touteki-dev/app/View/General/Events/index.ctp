@@ -11,17 +11,17 @@
             <ul>
                 <li>
                     <h4>朝顔の支柱に</h4>
-                    <img src="/img/other/woman_4.png" class="img1">
+                    <div class="img1"></div>
                     <a href="#"><button class="btn btn-warning">商品の詳細はこちら</button></a>
                 </li>
                 <li>
                     <h4>お皿の代わりに</h4>
-                    <img src="/img/other/cook.png" class="img2">
+                    <div class="img2"></div>
                     <a href="#"><button class="btn btn-warning">商品の詳細はこちら</button></a>
                 </li>
                 <li>
                     <h4>いつものアレを混ぜる時に</h4>
-                    <img src="/img/other/witch.PNG" class="img4">
+                    <div class="img4"></div>
                     <a href="#"><button class="btn btn-warning">商品の詳細はこちら</button></a>
                 </li>
                 <li class="List_l">
@@ -31,7 +31,7 @@
                 </li>
                 <li class="List_l">
                     <h4>掃除をして欲しい時に</h4>
-                    <img src="/img/other/roomba.png" class="img8">
+                    <div class="img8"></div>
                     <a href="#"><button class="btn btn-warning">商品の詳細はこちら</button></a>
                 </li>
                 <li>

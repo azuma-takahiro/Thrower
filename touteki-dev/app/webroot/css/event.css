@@ -47,15 +47,39 @@
 }
 
 #EventCss .img1 {
+    display: block;
+    background: url(/img/other/woman_4.png) no-repeat;
     width: 250px;
     height: 340px;
     margin-bottom: 10px;
+    background-size: contain;
+}
+
+#EventCss .img1:hover {
+    display: block;
+    background: url(/img/other/woman_4_h.png) no-repeat;
+    width: 250px;
+    height: 340px;
+    margin-bottom: 10px;
+    background-size: contain;
 }
 
 #EventCss .img2 {
+    display: block;
+    background: url(/img/other/cook.png) no-repeat;
     width: 250px;
     height: 340px;
     margin-bottom: 10px;
+    background-size: contain;
+}
+
+#EventCss .img2:hover {
+    display: block;
+    background: url(/img/other/cook_h.png) no-repeat;
+    width: 250px;
+    height: 340px;
+    margin-bottom: 10px;
+    background-size: contain;
 }
 
 #EventCss .img3 {
@@ -64,9 +88,21 @@
 }
 
 #EventCss .img4 {
+    display: block;
+    background: url(/img/other/witch.png) no-repeat;
     width: 280px;
     height: 340px;
-    margin:0 0 10px 50px;
+    margin-top: 20px;
+    background-size: contain;
+}
+
+#EventCss .img4:hover {
+    display: block;
+    background: url(/img/other/witch_h.png) no-repeat;
+    width: 280px;
+    height: 340px;
+    margin-top: 20px;
+    background-size: contain;
 }
 
 #EventCss .img5 {
@@ -86,6 +122,17 @@
 }
 
 #EventCss .img8 {
+    display: block;
+    background: url(/img/other/roomba.png) no-repeat;
     width: 450px;
     height: 350px;
+    background-size: contain;
+}
+
+#EventCss .img8:hover {
+    display: block;
+    background: url(/img/other/roomba_h.png) no-repeat;
+    width: 450px;
+    height: 350px;
+    background-size: contain;
 }
