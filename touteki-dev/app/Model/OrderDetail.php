@@ -8,6 +8,8 @@ App::uses('AppModel', 'Model');
  */
 class OrderDetail extends AppModel {
 
+    public $belongsTo = array('Order','Item');
+
     public $validate = [
         'item_id' => [
             'required' => [
@@ -35,9 +37,11 @@ class OrderDetail extends AppModel {
             'OrderDetail.order_date',
             'OrderDetail.created',
             'OrderDetail.modified',
+            'Order.id',
         ];
 
         $conditions = [
+            'OrderDetail.order_id' => 'Order.id',
             'OrderDetail.delete_flg' => 0,
         ];
 

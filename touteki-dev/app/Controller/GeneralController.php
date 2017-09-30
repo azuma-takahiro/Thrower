@@ -59,7 +59,7 @@ App::uses('AppController', 'Controller');
 
      public function beforeFilter() {
          parent::beforeFilter();
-         // $this->layout = '';
+         $this->layout = 'general';
          // $this->__setAdminAuth();
      }
 

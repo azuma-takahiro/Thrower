@@ -1,5 +1,5 @@
-<nav class="navbar navbar-default">
-    <div class="navbar-header">
+<nav class="navbar navbar-default gnavi_general">
+    <!-- <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#gnavi">
             <span class="sr-only">メニュー</span>
             <span class="icon-bar"></span>
@@ -9,16 +9,33 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-    </div>
+    </div> -->
+    <div id="gnavi_top">
+        <div id="logo" class="col-md-3"><img src='/img/other/touteki_logo.png'></div>
+        <div id="gnavi_bottom" class="collapse navbar-collapse col-md-6">
+            <ul class="nav navbar-nav">
+                <li class=""><a href="#"><i class="fa fa-home"></i></a></li>
+                <li class=""><a href="#">やり投げ<br><span>Javelin</span></a></li>
+                <li class=""><a href="#">円盤投げ<br><span>Discus</span></a></li>
+                <li class=""><a href="#">ハンマー投げ<br><span>Hummer</span></a></li>
+                <li class=""><a href="#">砲丸投げ<br><span>Shot</span></a></li>
+            </ul>
+        </div>
+        <div id="search_wrap" class="col-md-3">
+            <div id="search" class="input-group">
+                <input type="text" class="form-control" placeholder="検索">
+                <span class="input-group-addon"><i class="fa fa-search"></i></span>
+            </div>
+            <div id="add" class=""><a class="btn btn-default" href="/Customers/signUp">新規登録</a></div>
+            <div id="login" class="btn btn-default">ログイン</div>
+            <!-- カートボタン -->
+            <div id="cart" class="pull-left">
+                <a href="/test/cart" id="cart_btn" data-toggle="popover">
+                    <span id="cart_icon" class="glyphicon glyphicon-shopping-cart" style="font-size:30px;"></span>
+                    <span id="cart_item_num"></span>
+                </a>
+            </div>
 
-    <div id="gnavi" class="collapse navbar-collapse">
-        <ul class="nav navbar-nav">
-            <li class="<?= $this->name === 'AdminUsers' ? 'active' : '' ?>" ><a href="/AdminUsers">管理者管理</a></li>
-            <li class="<?= $this->name === 'AdminCustomers' ? 'active' : '' ?>"><a href="/AdminCustomers">顧客管理</a></li>
-            <li class="<?= $this->name === 'AdminItems' ? 'active' : '' ?>"><a href="/AdminItems">商品管理</a></li>
-            <li class="<?= $this->name === 'AdminOrderDetails' ? 'active' : '' ?>"><a href="/AdminOrderDetails">受注管理</a></li>
-            <li class="<?= $this->name === 'AdminComments' ? 'active' : '' ?>"><a href="/AdminComments">レビュー管理</a></li>
-            <li class="<?= $this->name === 'AdminInquiry' ? 'active' : '' ?>"><a href="AdminInquiries">お問い合わせ管理</a></li>
-        </ul>
-    </div>
+        </div><!--#search_wrap-->
+    </div><!--#gnavi_top-->
 </nav>

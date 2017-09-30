@@ -17,7 +17,13 @@ class AdminOrderDetailsController extends AdminController {
     }
 
     public function index() {
-        $orderdetails = $this->OrderDetail->getOrderDetailList();
+        $id = $this->request->pass[0];
+        $options = array(
+            'conditions' => array(
+                'OrderDetail.order_id' => $id),
+                'OrderDetail.delete_flg' => 0,
+            );
+        $orderdetails = $this->OrderDetail->find('all', $options);
         $this->set('orderdetails', $orderdetails);
     }
 

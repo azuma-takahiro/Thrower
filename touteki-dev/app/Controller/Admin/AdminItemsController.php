@@ -23,6 +23,9 @@ class AdminItemsController extends AdminController {
         parent::beforeFilter();
         // $this->Auth->allow('add', 'logout');
         // $this->set('uri_segment', explode('/', $_SERVER['REQUEST_URI']));
+
+        $item_category = configure::read('item_category');
+        $this->set('item_category',$item_category);
     }
 
     /**
@@ -62,6 +65,8 @@ class AdminItemsController extends AdminController {
             // リクエストデータを変数へ格納
             $data = $this->request->data;
 
+
+
             // 新規登録と更新で処理を分ける
             if(empty($data['id'])) {
                 // 新規登録の場合はモデルを初期化
@@ -70,6 +75,12 @@ class AdminItemsController extends AdminController {
                 // 更新の場合はモデルにidをセット
                 $this->Item->id = $data['id'];
             }
+
+            // //画像の保存
+            // $path = include (dirname(__FILE__). '/../../webroot/img/item');
+            // $image = $image = $this->request->data['Item']['img_name'];
+            // // $this->Session->setFlash('画像を登録しました');
+            // move_uploaded_file($image['tmp_name'],$path);
 
             // validationにかけるためにモデルにデータをセット
             $this->Item->set($data);

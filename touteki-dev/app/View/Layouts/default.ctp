@@ -29,7 +29,9 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		echo $this->Html->meta('icon');
 
 		echo $this->Html->css('bootstrap.min');
-
+		echo $this->Html->css('font-awesome.min');
+		echo $this->Html->css('admin');
+		
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->fetch('script');
@@ -40,7 +42,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 <body>
 	<div id="container">
 		<div id="header">
-			<?php echo $this->element('navbar'); ?>
+			<?php echo $this->element('admin_navbar'); ?>
 		</div>
 		<div id="content">
 

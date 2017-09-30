@@ -18,7 +18,7 @@
                     <td><?= $user['User']['id']; ?></td>
                     <td><?= $user['User']['username']; ?></td>
                     <td><?= $user['User']['password']; ?></td>
-                    <td><?= $user['User']['role']; ?></td>
+                    <td><?php echo strtr($user['User']['role'],$role); ?></td>
                     <td><?= $user['User']['created']; ?></td>
                     <td><?= $user['User']['modified']; ?></td>
                     <td>
@@ -30,3 +30,7 @@
         <?php endif; ?>
     </tbody>
 </table>
+<?php echo $this->Paginator->counter(); ?><br/>
+<?php echo $this->Paginator->prev('前へ'); ?>
+<?php echo $this->Paginator->numbers(); ?>
+<?php echo $this->Paginator->next('次へ'); ?>
