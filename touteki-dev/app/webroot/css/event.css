@@ -83,9 +83,21 @@
 }
 
 #EventCss .img3 {
+    display: block;
+    background: url(/img/other/huta.png) no-repeat;
     width: 450px;
     height: 350px;
+    background-size: contain;
 }
+
+#EventCss .img3:hover {
+    display: block;
+    background: url(/img/other/huta_h.png) no-repeat;
+    width: 450px;
+    height: 350px;
+    background-size: contain;
+}
+
 
 #EventCss .img4 {
     display: block;
@@ -106,19 +118,53 @@
 }
 
 #EventCss .img5 {
+    display: block;
+    background: url(/img/other/woman_1.png) no-repeat;
     width: 250px;
     height: 350px;
+    background-size: contain;
+}
+
+#EventCss .img5:hover {
+    display: block;
+    background: url(/img/other/woman_1_h.png) no-repeat;
+    width: 250px;
+    height: 350px;
+    background-size: contain;
 }
 
 #EventCss .img6 {
+    display: block;
+    background: url(/img/other/moon.png) no-repeat;
     width: 300px;
     height: 350px;
+    background-size: contain;
+}
+
+#EventCss .img6:hover {
+    display: block;
+    background: url(/img/other/moon_h.png) no-repeat;
+    width: 300px;
+    height: 350px;
+    background-size: contain;
 }
 
 #EventCss .img7 {
+    display: block;
+    background: url(/img/other/music.png) no-repeat;
     width: 300px;
     height: 340px;
     margin-bottom: 10px;
+    background-size: contain;
+}
+
+#EventCss .img7:hover {
+    display: block;
+    background: url(/img/other/music_h.png) no-repeat;
+    width: 300px;
+    height: 340px;
+    margin-bottom: 10px;
+    background-size: contain;
 }
 
 #EventCss .img8 {
