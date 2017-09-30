@@ -1,3 +1,4 @@
+<?php echo $this->Paginator->counter(array('format' => __('投稿総数： {:count}件')));?>
 <table class="table table-striped table-hover">
     <thead>
         <tr>
@@ -30,3 +31,8 @@
         <?php endif; ?>
     </tbody>
 </table>
+<CENTER>
+<?php echo $this->Paginator->prev('前へ'); ?>
+<?php echo $this->Paginator->numbers(); ?>
+<?php echo $this->Paginator->next('次へ'); ?>
+</CENTER>

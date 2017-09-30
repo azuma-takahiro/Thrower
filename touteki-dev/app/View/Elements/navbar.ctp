@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default gnavi_general">
     <!-- <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#gnavi">
             <span class="sr-only">メニュー</span>
@@ -11,7 +11,7 @@
         </button>
     </div> -->
     <div id="gnavi_top">
-        <div id="logo" class="col-md-3"><img src='/img/other/touteki.png'></div>
+        <div id="logo" class="col-md-3"><img src='/img/other/touteki_logo.png'></div>
         <div id="gnavi_bottom" class="collapse navbar-collapse col-md-6">
             <ul class="nav navbar-nav">
                 <li class=""><a href="/"><i class="fa fa-home"></i></a></li>

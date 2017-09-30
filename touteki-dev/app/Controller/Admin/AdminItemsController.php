@@ -10,7 +10,7 @@ class AdminItemsController extends AdminController {
 
     // 使用コンポーネント
     public $components    = [
-        'Flash',
+        'Flash','Paginator'
     ];
     public $helpers       = [];
 
@@ -33,8 +33,17 @@ class AdminItemsController extends AdminController {
      * @return [type] [description]
      */
     public function index() {
-        // Itemモデルで定義したのgetItemListメソッドを使用して一覧を取得
-        $items = $this->Item->getItemList();
+        $this->Paginator->settings = array(
+            'limit' => 20,
+            'order' => array(
+                'Item.id' => 'DESC'
+            ),
+            'conditions' => array(
+                'Item.delete_flg' => 0
+            ),
+        );
+        $items = $this->Paginator->Paginate();
+
         // 変数$Itemsをviewで使えるようにセット
         $this->set('items', $items);
     }

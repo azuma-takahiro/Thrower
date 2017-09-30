@@ -7,13 +7,22 @@ class AdminCommentsController extends AdminController {
         'Comment'
     ];
     public $components    = [
-        'Flash'
+        'Flash','Paginator'
     ];
     public $helpers       = [];
 
 
     public function index() {
-        $comments = $this->Comment->getCommentList();
+        $this->Paginator->settings = array(
+            'limit' => 20,
+            'order' => array(
+                'Comment.id' => 'DESC'
+            ),
+            'conditions' => array(
+                'Comment.delete_flg' => 0
+            ),
+        );
+        $comments = $this->Paginator->Paginate();
         $this->set('comments', $comments);
     }
 

@@ -8,7 +8,7 @@ class AdminInquiriesController extends AdminController {
     ];
     public $helpers = [];
     public $components = [
-        'Flash'
+        'Flash','Paginator'
     ];
 
     public function beforeFilter() {
@@ -20,7 +20,16 @@ class AdminInquiriesController extends AdminController {
 
 
     public function index() {
-        $inquiries = $this->Inquiry->getInquiryList();
+        $this->Paginator->settings = array(
+            'limit' => 20,
+            'order' => array(
+                'Inquiry.id' => 'DESC'
+            ),
+            'conditions' => array(
+                'Inquiry.delete_flg' => 0
+            ),
+        );
+        $inquiries = $this->Paginator->Paginate();
         $this->set('inquiries',$inquiries);
     }
 

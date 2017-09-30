@@ -25,11 +25,22 @@ class AdminOrderDetailsController extends AdminController {
             );
         $orderdetails = $this->OrderDetail->find('all', $options);
         $this->set('orderdetails', $orderdetails);
+
+        $params = array(
+            'fields' => array(
+                'sum(OrderDetail.quantity*Item.price) as totalprice'
+                ),
+            'conditions' => array(
+                'OrderDetail.order_id' => $id),
+                'OrderDetail.delete_flg' => 0,
+            );
+        $totalprice = $this->OrderDetail->find('first',$params);
+        $this->set('totalprice',$totalprice);
     }
 
     public function edit($id = null) {
         if(!empty($id)) {
-            $orderdetails = $this->OrderDetail->    findById($id);
+            $orderdetails = $this->OrderDetail->findById($id);
             $this->request->data = $orderdetails;
         }
     }

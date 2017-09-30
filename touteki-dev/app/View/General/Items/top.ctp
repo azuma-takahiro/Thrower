@@ -1,6 +1,9 @@
+<div id="top_image">
+    <iframe width="280" height="160" src="https://www.youtube.com/embed/jKIL9gFwevE?rel=0&amp;controls=0&amp;showinfo=0&amp;loop=1&amp;autoplay=1" frameborder="0" allowfullscreen></iframe>
+</div>
 <div class="container">
-    <div class='container-large bg-success'>
-        <div class='row'> 
+    <div class='container'>
+        <div class='row'>
             <p class='bg-success'>
                 <ul>
                     <li class="col-xs-12 col-md-3">やり<img src='/img/other/javelin.png'><br>400×230</li>
@@ -12,7 +15,7 @@
         </div>
     </div>
 
-    <div class='container bg-info'>
+    <div class='container'>
         <div class='row'>
             <p><h1>EVENT</h1></p>
             <ul>

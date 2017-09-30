@@ -7,7 +7,8 @@ class AdminOrdersController extends AdminController {
         'Order',
     ];
     public $components    = [
-        'Flash'];
+        'Flash','Paginator'
+    ];
     public $helpers       = [];
 
     public function beforeFilter() {
@@ -17,7 +18,19 @@ class AdminOrdersController extends AdminController {
     }
 
     public function index() {
-        $orders = $this->Order->getOrderList();
+        $this->Paginator->settings = array(
+            'limit' => 20,
+            'order' => array(
+                'Order.id' => 'DESC'
+                ),
+                'order' => array(
+                    'Order.id' => 'DESC'
+                ),
+                'conditions' => array(
+                    'Order.delete_flg' => 0
+                ),
+            );
+        $orders = $this->Paginator->Paginate();
         $this->set('orders', $orders);
     }
 
