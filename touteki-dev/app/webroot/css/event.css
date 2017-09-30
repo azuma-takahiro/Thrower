@@ -1,0 +1,48 @@
+.Wrap {
+    width: 950px;
+    margin: 0 auto;
+}
+
+.EventLabel {
+    float: left;
+    display: inline-block;
+}
+
+.
+li {
+    width: 300px;
+    height: 200px;
+    text-align: center;
+    display: inline-block;
+}
+
+
+img.img1 {
+    width: 20%;
+    height: 20%;
+}
+
+img.img2 {
+    width: 20%;
+    height: 20%;
+}
+
+img.img3 {
+    width: 20%;
+    height: 20%;
+}
+
+img.img4 {
+    width: 20%;
+    height: 20%;
+}
+
+img.img5 {
+    width: 20%;
+    height: 20%;
+}
+
+img.img6 {
+    width: 20%;
+    height: 20%;
+}
