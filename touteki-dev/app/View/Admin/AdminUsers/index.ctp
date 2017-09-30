@@ -1,4 +1,6 @@
-<a href="<?=$this->Html->url(['action' => 'edit']);?>" class="btn btn-primary">登録</a>
+<a href="<?=$this->Html->url(['action' => 'edit']);?>" class="btn btn-primary">登録</a><br />
+<br />
+<?php echo $this->Paginator->counter(array('format' => __('登録総数： {:count}件')));?>
 <table class="table table-striped table-hover">
     <thead>
         <tr>
@@ -30,7 +32,8 @@
         <?php endif; ?>
     </tbody>
 </table>
-<?php echo $this->Paginator->counter(); ?><br/>
+<CENTER>
 <?php echo $this->Paginator->prev('前へ'); ?>
 <?php echo $this->Paginator->numbers(); ?>
 <?php echo $this->Paginator->next('次へ'); ?>
+</CENTER>

@@ -8,7 +8,7 @@ class AdminCustomersController extends AdminController {
     ];
     public $helpers = [];
     public $components = [
-        'Flash'
+        'Flash','Paginator'
     ];
 
 
@@ -27,10 +27,17 @@ class AdminCustomersController extends AdminController {
     }
 
     public function index() {
-        // $list = 顧客一覧
-        $customers = $this->Customer->getCustomerList();
+        $this->Paginator->settings = array(
+            'limit' => 20,
+            'order' => array(
+                'Customer.id' => 'DESC'
+            ),
+            'conditions' => array(
+                'Customer.delete_flg' => 0
+            ),
+        );
+        $customers = $this->Paginator->Paginate();
         $this->set('customers',$customers);
-
     }
 
     public function add() {

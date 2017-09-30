@@ -47,7 +47,7 @@ class AdminUsersController extends AdminController {
      */
     public function index() {
         $this->Paginator->settings = array(
-            'limit' => 20,
+            'limit' => 10,
             'order' => array(
                 'User.id' => 'DESC'
             ),

@@ -10,17 +10,9 @@
             <span class="icon-bar"></span>
         </button>
     </div> -->
-    <div id="gnavi_top" class="">
-    <div id="logo" class="col-md-2"><img src='/img/other/touteki.png'></div>
-        <div class="col-md-5">
-            <div id="search" class="input-group"><input type="text" class="form-control" placeholder="検索">
-                <span class="input-group-addon"><i class="fa fa-search"></i></span></div>
-                <div id="add" class=""><a class="btn btn-default" href="/Customers/signUp">新規登録</a></div>
-                <div id="login" class="btn btn-default">ログイン</div>
-            </div>
-        </div>
-
-        <div id="gnavi_bottom" class="collapse navbar-collapse col-md-5">
+    <div id="gnavi_top">
+        <div id="logo" class="col-md-3"><img src='/img/other/touteki.png'></div>
+        <div id="gnavi_bottom" class="collapse navbar-collapse col-md-6">
             <ul class="nav navbar-nav">
                 <li class=""><a href="#"><i class="fa fa-home"></i></a></li>
                 <li class=""><a href="#">やり投げ<br><span>Javelin</span></a></li>
@@ -29,4 +21,21 @@
                 <li class=""><a href="#">砲丸投げ<br><span>Shot</span></a></li>
             </ul>
         </div>
-    </nav>
+        <div id="search_wrap" class="col-md-3">
+            <div id="search" class="input-group">
+                <input type="text" class="form-control" placeholder="検索">
+                <span class="input-group-addon"><i class="fa fa-search"></i></span>
+            </div>
+            <div id="add" class=""><a class="btn btn-default" href="/Customers/signUp">新規登録</a></div>
+            <div id="login" class="btn btn-default">ログイン</div>
+            <!-- カートボタン -->
+            <div id="cart" class="pull-left">
+                <a href="/test/cart" id="cart_btn" data-toggle="popover">
+                    <span id="cart_icon" class="glyphicon glyphicon-shopping-cart" style="font-size:30px;"></span>
+                    <span id="cart_item_num"></span>
+                </a>
+            </div>
+
+        </div><!--#search_wrap-->
+    </div><!--#gnavi_top-->
+</nav>

@@ -38,6 +38,7 @@ class OrderDetail extends AppModel {
             'OrderDetail.created',
             'OrderDetail.modified',
             'Order.id',
+            'Item.price',
         ];
 
         $conditions = [

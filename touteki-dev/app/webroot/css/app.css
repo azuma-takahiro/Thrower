@@ -4,13 +4,16 @@
         display:none;
     }
 }
-li{
-    list-style: none;
+
+.fl-right{
+    float: right;
+}
+.fl-left{
+    float: left;
 }
 
-img{
-    width: 100%;
-    height: 100%;
+li{
+    list-style: none;
 }
 
 footer {
@@ -35,7 +38,7 @@ footer {
     padding: 5px 15px;
 }
 .nav.navbar-nav li{
-    border-right: dotted 4px;
+    border-right: dotted 4px #a37e52;
 }
 .nav.navbar-nav li a .fa-home{
     font-size: 25px;
@@ -45,7 +48,7 @@ footer {
     font-size: 12px;
 }
 .nav.navbar-nav li:first-child{
-    border-left: dotted 4px;
+    border-left: dotted 4px #a37e52;
 }
 .navbar-nav{
     display: inline-block;
@@ -54,6 +57,12 @@ footer {
 
 #gnavi_bottom{
     text-align: center;
+}
+#logo{
+    padding-right: 0;
+}
+#search_wrap{
+    padding-left: 
 }
 /*customer*/
 th.required:after {
