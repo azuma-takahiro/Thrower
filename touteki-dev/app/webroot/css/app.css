@@ -27,7 +27,7 @@ footer {
 }
 #header .navbar-default{
     background: #fdfbe2;
-    position: fixed;
+    /*position: fixed;*/
     width: 100%;
 }
 #header a{
