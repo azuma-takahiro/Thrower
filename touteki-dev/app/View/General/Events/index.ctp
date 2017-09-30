@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="event.css">
+    <link rel="stylesheet" type="text/css" href="css/event.css">
     <title>大人の女性のための投てき競技用品特集</title>
 </head>
 <body>
