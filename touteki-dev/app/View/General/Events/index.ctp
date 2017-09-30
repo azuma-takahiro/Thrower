@@ -29,6 +29,11 @@
                     <img src="/img/other/huta.png" class="img3">
                     <a href="#"><button class="btn btn-warning">商品の詳細はこちら</button></a>
                 </li>
+                <li class="List_l">
+                    <h4>掃除をして欲しい時に</h4>
+                    <img src="/img/other/roomba.png" class="img8">
+                    <a href="#"><button class="btn btn-warning">商品の詳細はこちら</button></a>
+                </li>
                 <li>
                     <h4>音楽を聴きたい時に</h4>
                     <img src="/img/other/music.png" class="img7">
