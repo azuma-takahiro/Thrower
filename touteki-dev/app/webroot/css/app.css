@@ -23,7 +23,9 @@ footer {
 .container{
     padding-top: 140px;
 }
-
+#logo img {
+    width: 200px;
+}
 /*top*/
 #gnavi_top #add,#gnavi_top #login{
     display: inline-block;
