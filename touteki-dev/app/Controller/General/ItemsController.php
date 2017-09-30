@@ -4,7 +4,7 @@ App::uses('GeneralController', 'Controller');
 
 class ItemsController extends GeneralController {
     public $uses          = [
-        'Item',
+    'Item',
     ];
     public $components    = [];
     public $helpers       = [];
@@ -13,9 +13,26 @@ class ItemsController extends GeneralController {
 
     }
 
-    // public function index() {
-    //
-    // }
+    public function index($id = null) {
+
+        $recursive = 0;
+
+        // $category = $item['Item']['item_category'];
+
+        $conditions = [
+        'Item.item_category' => $id,
+        ];
+
+        $recursive = 0;
+
+        $order = [
+        'Item.id' => 'ASC'
+        ];
+
+        $cat_items = $this->Item->find('all',compact('conditions','recursive','order'));
+        $cat_items = Hash::extract($cat_items,'{n}.Item');
+        $this->set('items',$cat_items);
+    }
 
     public function detail($id = null) {
         if(!$id) {
@@ -33,13 +50,13 @@ class ItemsController extends GeneralController {
         $category = $item['Item']['item_category'];
 
         $conditions = [
-            'Item.item_category' => $category,
+        'Item.item_category' => $category,
         ];
 
         $recursive = 0;
 
         $order = [
-            'Item.id' => 'ASC'
+        'Item.id' => 'ASC'
         ];
 
         $same_cat_items = $this->Item->find('all',compact('conditions','recursive','order'));
