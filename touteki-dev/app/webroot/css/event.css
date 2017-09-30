@@ -1,4 +1,4 @@
-#EventCss > .wrap {
+#EventCss .wrap {
     width: 1200px;
     margin: 0 auto;
 }
@@ -29,14 +29,14 @@
 }
 
 #EventCss .EventLabel {
-    width: 1000px;
+    width: 850px;
     margin: 0 auto;
     margin-bottom: 30px;
 }
 
 #EventCss .Explain {
     display: inline-block;
-    width: 500px;
+    width: 400px;
 }
 
 #EventCss .img0 {
@@ -66,7 +66,7 @@
 #EventCss .img4 {
     width: 280px;
     height: 340px;
-    margin: 0 0 10px 100px;
+    margin:0 0 10px 50px;
 }
 
 #EventCss .img5 {
@@ -77,4 +77,10 @@
 #EventCss .img6 {
     width: 300px;
     height: 350px;
+}
+
+#EventCss .img7 {
+    width: 300px;
+    height: 340px;
+    margin-bottom: 10px;
 }
