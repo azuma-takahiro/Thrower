@@ -1,8 +1,8 @@
 <?php
 
-App::uses('AdminController', 'Controller');
+App::uses('AppController', 'Controller');
 
-class AdminUsersController extends AdminController {
+class AdminUsersController extends AppController {
 
     // 使用モデル
     public $uses          = [
@@ -11,7 +11,6 @@ class AdminUsersController extends AdminController {
 
     // 使用コンポーネント
     public $components    = [
-        'Flash',
     ];
 
     // 使用ヘルパー
@@ -23,7 +22,11 @@ class AdminUsersController extends AdminController {
      */
     public function beforeFilter() {
         parent::beforeFilter();
-        // $this->Auth->allow('add', 'logout');
+//        $this->Auth->allow('login','edit','save');
+        $this->Auth->allow();
+        // $admin_components = new AdminController();
+        // $this->components = array_merge($this->components,$admin_components->components);
+//        $this->Auth->allow('logout');
         // $this->set('uri_segment', explode('/', $_SERVER['REQUEST_URI']));
     }
 
@@ -124,17 +127,21 @@ class AdminUsersController extends AdminController {
         $this->redirect(['action'=>'index']);
     }
 
-    // public function login() {
-    //     if ($this->request->is('post')) {
-    //         if ($this->Auth->login()) {
-    //             $this->redirect($this->Auth->redirect());
-    //         } else {
-    //             $this->Flash->error(__('ユーザ名かパスワードが間違っています！再度入力してください！'));
-    //         }
-    //     }
-    // }
-    //
-    // public function logout() {
-    //     $this->redirect($this->Auth->logout());
-    // }
+    public function login() {
+        if ($this->request->is('post')) {
+            // var_dump($this->request->data);
+            // debug($this->Auth->settings);
+            if ($this->Auth->login()) {
+                $this->redirect([
+                    'controller' => $this->Auth->loginRedirect['controller'],
+                    'action' => $this->Auth->loginRedirect['action']]);
+            } else {
+                $this->Flash->error(__('ユーザ名かパスワードが間違っています！再度入力してください！'));
+            }
+        }
+    }
+    
+    public function logout() {
+        $this->redirect($this->Auth->logout());
+    }
 }
