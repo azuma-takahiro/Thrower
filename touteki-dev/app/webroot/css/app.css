@@ -137,6 +137,14 @@ footer {
     background-position: center bottom;
 }
 
+/* Events dummy */
+
+.dummy_img {
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    height: auto;
+}
 
 /*customer*/
 th.required:after {

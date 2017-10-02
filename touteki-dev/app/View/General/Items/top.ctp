@@ -21,9 +21,9 @@
             <h1>EVENT</h1>
             <ul>
                 <li class="mb-none col-md-1"><a href="#"><img src='/img/other/arrow_left.png'></a></li>
-                <li class="col-xs-12 col-md-3"><a href="#"><img src='/img/other/event_1.png'></a></li>
-                <li class="col-xs-12 col-md-3"><a href="#"><img src='/img/other/event_2.png'></a></li>
-                <li class="col-xs-12 col-md-3"><a href="#"><img src='/img/other/event_3.png'></a></li>
+                <li class="col-xs-12 col-md-3"><a href="/events"><img src='/img/other/event_1.png'></a></li>
+                <li class="col-xs-12 col-md-3"><a href="/events/dummy?id=2"><img src='/img/other/event_2.png'></a></li>
+                <li class="col-xs-12 col-md-3"><a href="/events/dummy?id=3"><img src='/img/other/event_3.png'></a></li>
                 <li class="mb-none col-md-1"><a href="#"><img src='/img/other/arrow_right.png'></a></li>
             </ul>
         </div>
@@ -73,5 +73,5 @@
         </div>
     </div>
 
-    
+
 </div>
