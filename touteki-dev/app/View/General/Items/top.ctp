@@ -7,10 +7,10 @@
             <p class='bg-success'>
                 <h1>CATEGORY</h1>
                 <ul>
-                    <li class="col-xs-12 col-md-3"><a href="#"><img src='/img/other/javelin.png'></a></li>
-                    <li class="col-xs-12 col-md-3"><a href="#"><img src='/img/other/discus.png'></a></li>
-                    <li class="col-xs-12 col-md-3"><a href="#"><img src='/img/other/hammer.png'></a></li>
-                    <li class="col-xs-12 col-md-3"><a href="#"><img src='/img/other/shot.png'></a></li>
+                    <li class="col-xs-12 col-md-3"><a href="/items/index/3"><img src='/img/other/javelin.png'></a></li>
+                    <li class="col-xs-12 col-md-3"><a href="/items/index/2"><img src='/img/other/discus.png'></a></li>
+                    <li class="col-xs-12 col-md-3"><a href="/items/index/4"><img src='/img/other/hammer.png'></a></li>
+                    <li class="col-xs-12 col-md-3"><a href="/items/index/1"><img src='/img/other/shot.png'></a></li>
                 </ul>
             </p>
         </div>
