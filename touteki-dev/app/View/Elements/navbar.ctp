@@ -30,10 +30,14 @@
             <div id="login" class="btn btn-default">ログイン</div>
             <!-- カートボタン -->
             <div id="cart" class="pull-left">
-                <a href="/items/cart" id="cart_btn" data-toggle="popover">
-                    <span id="cart_icon" class="glyphicon glyphicon-shopping-cart" style="font-size:30px;"></span>
-                    <span id="cart_item_num"></span>
-                </a>
+                <form id="my_cart1" method="post" name="my_cart1" action="/items/cart">
+                    <input type="hidden" name="items" value="">
+                    <a href="javascript:my_cart1.submit()" id="cart_btn" data-toggle="popover">
+                        <span id="cart_icon" class="glyphicon glyphicon-shopping-cart" style="font-size:30px;"></span>
+                        <span id="cart_item_num"></span>
+                    </a>
+                </form>
+
             </div>
 
         </div><!--#search_wrap-->

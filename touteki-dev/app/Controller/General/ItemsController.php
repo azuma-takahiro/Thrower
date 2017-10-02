@@ -63,4 +63,34 @@ class ItemsController extends GeneralController {
         $this->set(compact('item','same_cat_items'));
     }
 
+    public function get_item_ajax() {
+        $this->autoRender = false;
+        if($this->request->is('ajax')) {
+            $id = $this->request->data['id'];
+            $item = Hash::extract($this->Item->findById($id), 'Item');
+            $this->response->type('json');
+            echo json_encode(compact('item'));
+        } else {
+            throw new MethodNotAllowedException;
+            return;
+        }
+    }
+
+    public function cart(){
+        $requests = json_decode($this->request->data['items'],true);
+        if(empty($requests)) {
+            $this->Flash->error('カートの中に商品が入っていません');
+        } else {
+            foreach($requests as $idx => $item) {
+                $result = $this->Item->findById($idx);
+                $result['Item']['item_num'] = $item['item_num'];
+                $results[] = $result;
+            }
+        }
+
+        $this->set(compact('results'));
+        // debug($results);exit;
+
+    }
+
 }
