@@ -30,7 +30,7 @@
             <div id="login" class="btn btn-default">ログイン</div>
             <!-- カートボタン -->
             <div id="cart" class="pull-left">
-                <a href="/test/cart" id="cart_btn" data-toggle="popover">
+                <a href="/items/cart" id="cart_btn" data-toggle="popover">
                     <span id="cart_icon" class="glyphicon glyphicon-shopping-cart" style="font-size:30px;"></span>
                     <span id="cart_item_num"></span>
                 </a>
