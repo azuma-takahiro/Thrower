@@ -1,4 +1,6 @@
-<div class="container">
+<?= $this->Html->script('cart');?>
+
+<div class="container cart_page">
     <div class="progress">
     	<div class="progress-bar" role="progressbar" style="width: 25%;">
     		ショッピングカート
@@ -13,8 +15,8 @@
     		確定
     	</div> -->
     </div>
-    <?php if($results):?>
-        <table class="table table-hover table-stripe">
+    <?php if(!empty($results)):?>
+        <table class="table table-hover table-stripe cart_list">
             <thead>
                 <tr>
                     <th>画像</th>
@@ -29,13 +31,17 @@
             </thead>
             <tbody>
                 <?php foreach ($results as $result): ?>
-                    <tr>
+                    <tr class="current_cart">
+                        <input type="hidden" name="item_id" value="<?=$result['Item']['id']?>">
                         <td><img src="<?=$result['Item']['picture_url']?>" class="img_thumb"></td>
                         <td><?=$result['Item']['item_name']?></td>
                         <td><?=$result['Item']['description']?></td>
-                        <td><?=$result['Item']['item_num']?></td>
-                        <td></td>
-                        <td><a href="#">削除</a></td>
+                        <td class="item_num"><?=$result['Item']['item_num']?></td>
+                        <td>
+                            <a href="javascript:void(0)">▲</a><br>
+                            <a href="javascript:void(0)">▼</a>
+                        </td>
+                        <td><a href="javascript:void(0)" id="delete_<?=$result['Item']['id']?>" data-id="<?=$result['Item']['id']?>" class="delete btn btn-danger">削除</a></td>
                         <td>￥<?=$result['Item']['price']?></td>
                         <td>￥<?=$result['Item']['price']*$result['Item']['item_num']?></td>
                     </tr>
@@ -73,8 +79,8 @@
             </tbody>
 
         </table>
+        <a href="/order" class="btn btn-info">次へ</a>
     <?php else:?>
         <?=$this->Flash->render();?>
     <?php endif;?>
-    <a href="/order" class="btn btn-info">次へ</a>
 </div>

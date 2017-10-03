@@ -1,3 +1,5 @@
+<?= $this->Html->script('detail');?>
+
 <div class="container">
 
     <ol class="breadcrumb">

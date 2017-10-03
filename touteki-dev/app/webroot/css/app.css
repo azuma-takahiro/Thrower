@@ -160,7 +160,10 @@ th.required:after {
     margin-left: 5px;
 }
 
-/* modal */
+/* cart */
+img.img_thumb {
+    width: 150px;
+}
 
 
 /* footer */
