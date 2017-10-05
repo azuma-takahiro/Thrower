@@ -1,4 +1,29 @@
 $(function() {
+    // cookieにjsonを保存可能にする
+    $.cookie.json = true;
+    // 読み込み時のcookie内データ取り出し
+    var currentItems = $.cookie('in_cart');
+    // Item総数初期化
+    var totalItemCount = 0;
+    for (var item in currentItems) {
+        totalItemCount += currentItems[item].item_num;
+    }
+    // １個以上の場合にカート横へ総数表示
+    if (totalItemCount > 0) {
+        $('#cart_item_num').text('('+totalItemCount+')');
+        $('#cart_btn').attr('data-content','カートには'+totalItemCount+'個の商品が入っています');
+    } else {
+        $('#cart_btn').attr('data-content','カートの中身は空です');
+    }
+    $('#cart_btn').popover({
+        trigger: 'hover',
+        html: true,
+    });
+    // hidden formのvalueを入れる
+    var json_items = JSON.stringify(currentItems)
+    $("#my_cart1 [name=items]").val(json_items);
+    $("#my_cart2 [name=items]").val(json_items);
+
     // cartに保存ボタンを押された時の動作
     $('.add_to_cart').click(function(){
         // 詳細ページからidを取得
@@ -40,17 +65,17 @@ $(function() {
 
         // モーダル表示
         getItemAjax(item_id).done(function(data) {
-            $('.modal_item_pic').attr({'src':data.item.picture_url,'width':'30%'})
+            $('.modal_item_pic').attr({'src':data.item.picture_url,'width':'30%'});
             $('.modal_item_name').text('商品名：'+data.item.item_name);
             $('.modal_item_price').text('金額：￥'+data.item.price);
-        })
-    })
+        });
+    });
 
     function getItemAjax(id) {
         return $.ajax({
-            url:"/item/get_item_ajax",
+            url:"/items/get_item_ajax",
             type:'POST',
             data:{id:id}
         });
     }
-})
+});
