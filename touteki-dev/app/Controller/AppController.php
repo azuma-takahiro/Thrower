@@ -43,6 +43,13 @@ class AppController extends Controller {
         ]
     ];
 
+    public $helpers = [
+        'Session',
+        'Html' => ['className' => 'TwitterBootstrap.BootstrapHtml'],
+        'Form' => ['className' => 'TwitterBootstrap.BootstrapForm'],
+        'Paginator' => ['className' => 'TwitterBootstrap.BootstrapPaginator'],
+     ];
+
     public function beforeFilter() {
         if($this->request->params['controller'] == 'Customers') {
             $this->layout = "general";

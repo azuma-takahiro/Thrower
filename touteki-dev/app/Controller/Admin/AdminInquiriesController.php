@@ -1,8 +1,8 @@
 <?php
 
-App::uses('AdminController', 'Controller');
+App::uses('AppController', 'Controller');
 
-class AdminInquiriesController extends AdminController {
+class AdminInquiriesController extends AppController {
     public $uses          = [
         'Inquiry',
     ];
@@ -13,6 +13,7 @@ class AdminInquiriesController extends AdminController {
 
     public function beforeFilter() {
         parent::beforeFilter();
+        $this->Auth->allow();
 
         $inquiry_category = configure::read('inquiry_category');
         $this->set('inquiry_category',$inquiry_category);

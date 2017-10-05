@@ -1,8 +1,8 @@
 <?php
 
-App::uses('AdminController', 'Controller');
+App::uses('AppController', 'Controller');
 
-class AdminItemsController extends AdminController {
+class AdminItemsController extends AppController {
     // 使用モデル
     public $uses          = [
         'Item',
@@ -21,7 +21,7 @@ class AdminItemsController extends AdminController {
      */
     public function beforeFilter() {
         parent::beforeFilter();
-        // $this->Auth->allow('add', 'logout');
+        $this->Auth->allow();
         // $this->set('uri_segment', explode('/', $_SERVER['REQUEST_URI']));
 
         $item_category = configure::read('item_category');

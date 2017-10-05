@@ -1,8 +1,8 @@
 <?php
 
-App::uses('GeneralController', 'Controller');
+App::uses('AppController', 'Controller');
 
-class InquiriesController extends GeneralController {
+class InquiriesController extends AppController {
     public $uses          = [
         'Inquiry',
     ];
@@ -13,6 +13,8 @@ class InquiriesController extends GeneralController {
 
     public function beforeFilter() {
         parent::beforeFilter();
+        $this->Auth->allow();
+        $this->layout = "general";
     }
 
     # index == add 

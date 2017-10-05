@@ -1,13 +1,19 @@
 <?php
 
-App::uses('GeneralController', 'Controller');
+App::uses('AppController', 'Controller');
 
-class CommentsController extends GeneralController {
+class CommentsController extends AppController {
     public $uses          = [
         'Comment',
     ];
     public $components    = [];
     public $helpers       = [];
+
+    public function beforeFilter() {
+        parent::beforeFilter();
+        $this->Auth->allow();
+        $this->layout = "general";
+    }
 
     public function add() {
         

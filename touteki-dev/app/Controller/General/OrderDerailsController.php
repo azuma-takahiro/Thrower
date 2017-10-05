@@ -1,11 +1,17 @@
 <?php
 
-App::uses('GeneralController', 'Controller');
+App::uses('AppController', 'Controller');
 
-class OrderDetailsController extends GeneralController {
+class OrderDetailsController extends AppController {
     public $uses          = [
         'OrderDetail',
     ];
     public $components    = [];
     public $helpers       = [];
+
+    public function beforeFilter() {
+        parent::beforeFilter();
+        $this->Auth->allow();
+        $this->layout = "general";
+    }
 }
