@@ -1,8 +1,8 @@
 <?php
 
-App::uses('GeneralController', 'Controller');
+App::uses('AppController', 'Controller');
 
-class OrdersController extends GeneralController {
+class OrdersController extends AppController {
     public $uses          = [
         'Order',
     ];
@@ -13,6 +13,8 @@ class OrdersController extends GeneralController {
 
     public function beforeFilter() {
         parent::beforeFilter();
+        $this->Auth->allow();
+        $this->layout = "general";
     }
 
     # index == add
