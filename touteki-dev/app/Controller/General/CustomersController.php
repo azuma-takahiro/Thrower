@@ -1,8 +1,8 @@
 <?php
 
-App::uses('GeneralController', 'Controller');
+App::uses('AppController', 'Controller');
 
-class CustomersController extends GeneralController {
+class CustomersController extends AppController {
     public $uses          = [
         'Customer',
     ];
@@ -10,6 +10,11 @@ class CustomersController extends GeneralController {
     'Flash'
     ];
     public $helpers       = [];
+
+    public function beforeFilter() {
+        parent::beforeFilter();
+        $this->Auth->allow('signup','signin','signout','save');
+    }
 
 
     public function signup() {
@@ -35,7 +40,7 @@ class CustomersController extends GeneralController {
                 $this->Customer->save($data);
 
                 $this->Flash->success(__('保存完了しました'));
-                $this->redirect(['action' => 'index']);
+                $this->redirect(['controller' => 'items','action' => 'top']);
             } else {
                 $this->render('edit');
             }
@@ -46,4 +51,22 @@ class CustomersController extends GeneralController {
         }
     }
 
+    public function signin() {
+        if($this->request->is('post')) {
+            // var_dump($this->request->data);
+            // var_dump($this->Auth->authenticate);exit;
+            if($this->Auth->login()) {
+                $this->redirect([
+                    'controller' => 'items',
+                    'action' => 'top'
+                ]);
+            } else {
+                $this->Flash->error(__('ユーザ名かパスワードが間違っています！再度入力してください！'));
+            }
+        }
+    }
+
+    public function signout() {
+        $this->redirect($this->Auth->logout());
+    }
 }

@@ -1,13 +1,19 @@
 <?php
 
-App::uses('GeneralController', 'Controller');
+App::uses('AppController', 'Controller');
 
-class ItemsController extends GeneralController {
+class ItemsController extends AppController {
     public $uses          = [
         'Item',
     ];
     public $components    = [];
     public $helpers       = [];
+
+    public function beforeFilter() {
+        parent::beforeFilter();
+        $this->Auth->allow();
+        $this->layout = "general";
+    }
 
     public function top() {
 

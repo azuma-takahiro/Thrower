@@ -1,6 +1,7 @@
 <?php
 
 App::uses('AppModel', 'Model');
+App::uses('SimplePasswordHasher','Controller/Component/Auth');
 
 /**
  * CakePHP Customer
@@ -80,6 +81,16 @@ class Customer extends AppModel {
         ];
 
         return $this->find('all', compact('recursive', 'conditions','order'));
+    }
+
+        public function beforeSave($options = array()) {
+        if(!empty($this->data[$this->alias]['password'])) {
+            $passwordHasher = new SimplePasswordHasher();
+            $this->data[$this->alias]['password'] = $passwordHasher->hash(
+                $this->data[$this->alias]['password']
+            );
+        }
+        return true;
     }
 
 }
