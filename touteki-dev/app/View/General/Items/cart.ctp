@@ -64,7 +64,7 @@
             </tbody>
 
         </table>
-        <form id="my_cart2" method="post" name="my_cart2" action="/orders/add">
+        <form id="my_cart2" method="post" name="my_cart2" action="/orders">
             <input type="hidden" name="items" value="">
             <a href="javascript:my_cart2.submit()" class="btn btn-info">次へ</a>
         </form>
