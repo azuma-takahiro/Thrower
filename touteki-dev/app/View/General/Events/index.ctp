@@ -32,12 +32,12 @@
                 <li class="List_l">
                     <h4>掃除をして欲しい時に</h4>
                     <div class="img8"></div>
-                    <a href="#"><button class="btn btn-warning">商品の詳細はこちら</button></a>
+                    <a href="https://www.irobot-jp.com/product/900series/simple.html"><button class="btn btn-warning">商品の詳細はこちら</button></a>
                 </li>
                 <li>
                     <h4>音楽を聴きたい時に</h4>
                     <div class="img7"></div>
-                    <a href="#"><button class="btn btn-warning">商品の詳細はこちら</button></a>
+                    <a href="http://www.sony.jp/walkman/products/RDP-NWV25B/"><button class="btn btn-warning">商品の詳細はこちら</button></a>
                 </li>
                 <li>
                     <h4>ペットが欲しいけど<br>難しい時に</h4>
@@ -47,7 +47,7 @@
                 <li>
                     <h4>美少女戦士になりたい時に</h4>
                     <div class="img6"></div>
-                    <a href="#"><button class="btn btn-warning">商品の詳細はこちら</button></a>
+                    <a href="http://sailormoon-official.com/"><button class="btn btn-warning">商品の詳細はこちら</button></a>
                 </li>
             </ul>
         </div>
