@@ -14,11 +14,11 @@
         <div id="logo" class="col-md-3"><img src='/img/other/touteki_logo.png'></div>
         <div id="gnavi_bottom" class="collapse navbar-collapse col-md-6">
             <ul class="nav navbar-nav">
-                <li class=""><a href="#"><i class="fa fa-home"></i></a></li>
-                <li class=""><a href="#">やり投げ<br><span>Javelin</span></a></li>
-                <li class=""><a href="#">円盤投げ<br><span>Discus</span></a></li>
-                <li class=""><a href="#">ハンマー投げ<br><span>Hummer</span></a></li>
-                <li class=""><a href="#">砲丸投げ<br><span>Shot</span></a></li>
+                <li class=""><a href="/"><i class="fa fa-home"></i></a></li>
+                <li class=""><a href="/Items/index/3">やり投げ<br><span>Javelin</span></a></li>
+                <li class=""><a href="/Items/index/2">円盤投げ<br><span>Discus</span></a></li>
+                <li class=""><a href="/Items/index/4">ハンマー投げ<br><span>Hummer</span></a></li>
+                <li class=""><a href="/Items/index/1">砲丸投げ<br><span>Shot</span></a></li>
             </ul>
         </div>
         <div id="search_wrap" class="col-md-3">
@@ -30,10 +30,14 @@
             <div id="login" class="btn btn-default">ログイン</div>
             <!-- カートボタン -->
             <div id="cart" class="pull-left">
-                <a href="/test/cart" id="cart_btn" data-toggle="popover">
-                    <span id="cart_icon" class="glyphicon glyphicon-shopping-cart" style="font-size:30px;"></span>
-                    <span id="cart_item_num"></span>
-                </a>
+                <form id="my_cart1" method="post" name="my_cart1" action="/items/cart">
+                    <input type="hidden" name="items" value="">
+                    <a href="javascript:my_cart1.submit()" id="cart_btn" data-toggle="popover">
+                        <span id="cart_icon" class="glyphicon glyphicon-shopping-cart" style="font-size:30px;"></span>
+                        <span id="cart_item_num"></span>
+                    </a>
+                </form>
+
             </div>
 
         </div><!--#search_wrap-->
