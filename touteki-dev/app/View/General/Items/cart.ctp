@@ -43,43 +43,31 @@
                         </td>
                         <td><a href="javascript:void(0)" id="delete_<?=$result['Item']['id']?>" data-id="<?=$result['Item']['id']?>" class="delete btn btn-danger">削除</a></td>
                         <td>￥<?=$result['Item']['price']?></td>
-                        <td>￥<?=$result['Item']['price']*$result['Item']['item_num']?></td>
+                        <td class="">￥<span class="order_price"><?=$result['Item']['price']*$result['Item']['item_num']?></span></td>
                     </tr>
                 <?php endforeach;?>
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td colspan="6"></td>
                     <td>小計</td>
-                    <td></td>
+                    <td class="subtotal">0</td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td colspan="6"></td>
                     <td>配送料</td>
-                    <td></td>
+                    <td class="deli_charge">0</td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td colspan="6"></td>
                     <td><strong>合計</strong></td>
-                    <td></td>
+                    <td class="total_fee">0</td>
                 </tr>
             </tbody>
 
         </table>
-        <a href="/order" class="btn btn-info">次へ</a>
+        <form id="my_cart2" method="post" name="my_cart2" action="/orders/add">
+            <input type="hidden" name="items" value="">
+            <a href="javascript:my_cart2.submit()" class="btn btn-info">次へ</a>
+        </form>
     <?php else:?>
         <?=$this->Flash->render();?>
     <?php endif;?>

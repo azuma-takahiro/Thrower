@@ -1,8 +1,15 @@
 $(function(){
     $('a.delete').on("click",function(){
-        // $(this).parent().remove();
+        $(this).parents('.current_cart').remove();
         setCookie();
     });
+
+    var subtotal = 0;
+    $('span.order_price').each(function(i,elem){
+        subtotal += parseInt($(elem).text());
+    });
+    $('.subtotal').text('￥'+subtotal);
+    $('.total_fee').text('￥'+subtotal);
 
 
     function setCookie() {
