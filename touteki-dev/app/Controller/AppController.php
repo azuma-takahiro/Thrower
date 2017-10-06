@@ -13,15 +13,15 @@ class AppController extends Controller {
         'Flash',
         'Auth' => [
             'loginAction' => [
-                'controller' => 'adminUsers',
+                'controller' => 'AdminUsers',
                 'action' => 'login'
             ],
             'loginRedirect' => [
-                'controller' => 'adminUsers',
+                'controller' => 'AdminUsers',
                 'action' => 'index'
             ],
             'logoutRedirect' => [
-                'controller' => 'adminUsers',
+                'controller' => 'AdminUsers',
                 'action' => 'login'
             ],
             'authError' => [
@@ -51,7 +51,8 @@ class AppController extends Controller {
      ];
 
     public function beforeFilter() {
-        if($this->request->params['controller'] == 'Customers') {
+        // debug($this->request->params);exit;
+        if($this->request->params['controller'] == 'Customers' || $this->request->params['controller'] == 'orders') {
             $this->layout = "general";
             $this->Auth->authenticate = [
                 'Form' => [
@@ -70,15 +71,15 @@ class AppController extends Controller {
             $this->Auth->loginAction = [
                 'controller' => 'customers',
                 'action' => 'signin',
-                'admin' => true
+                // 'admin' => true
             ];
             $this->Auth->loginRedirect = [
                 'controller' => 'items',
                 'action' => 'top',
-                'admin' => true
+                // 'admin' => true
             ];
             $this->Auth->logoutRedirect = [
-                'controller' => 'customers',
+                'controller' => 'Customers',
                 'action' => 'signin',
                 // 'admin' => true
             ];
