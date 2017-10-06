@@ -38,7 +38,7 @@
                         <div class="thumbnail">
                             <img src="/img/item/javelin_5.jpg">
                             <div class="caption">
-                                <h3>商品名：競技用やり~超公式~</h3>
+                                <h3>1位：競技用やり~超公式~</h3>
                                 <p>説明：公式競技で使えるやりです。公式の中の公式です。</p>
                                 <p>価格：¥15000</p>
                             </div>
@@ -50,7 +50,7 @@
                         <div class="thumbnail">
                             <img src="/img/item/hammmer_2.jpg">
                             <div class="caption">
-                                <h3>商品名：ハンマー カラフル5個セット</h3>
+                                <h3>2位：ハンマー カラフル5個セット</h3>
                                 <p>説明：カラーバリエーション豊富なハンマー5個セット。その日の気分に合わせてどうぞ。</p>
                                 <p>価格：¥19800</p>
                             </div>
@@ -62,7 +62,7 @@
                         <div class="thumbnail">
                             <img src="/img/item/discus_3.jpg">
                             <div class="caption">
-                                <h3>商品名：練習用円盤 1.5kg</h3>
+                                <h3>3位：練習用円盤 1.5kg</h3>
                                 <p>説明：練習用。気軽に競技を始められます。 当HP最安値です。真ん中の×がカワイイ。</p>
                                 <p>価格：¥1350</p>
                             </div>

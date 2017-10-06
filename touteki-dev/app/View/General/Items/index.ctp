@@ -5,7 +5,7 @@
             <div class="row">
                 <?php if(count($items)) :?>
                     <div class="col-md-12">
-                        <?php for($listcol = 0; $listcol < count($items); $listcol++ ) :?>
+                        <?php for($listcol = 0; $listcol < 6; $listcol++ ) :?>
                             <div class="col-xs-6 col-md-4">
                                 <div class="thumbnail">
                                     <a href="/items/detail/<?= $items[$listcol]['id'];?>"><img src="<?=  $items[$listcol]['picture_url'] ? $items[$listcol]['picture_url'] : '/img/other/noimage.jpeg' ;?>">
@@ -32,7 +32,7 @@
             </ol>
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
-                    <?php for($related = 1; $related <= 4; $related++):?>
+                    <?php for($related = 0; $related <= 3; $related++):?>
                         <div class="col-xs-6 col-md-3">
                             <div class="thumbnail">
                                 <a href="/items/detail/<?= $items[$related]['id'] ;?>"><img src="<?=  $items[$related]['picture_url'] ;?>">
@@ -46,7 +46,7 @@
                     <?php endfor ;?>
                 </div>
                 <div class="item">
-                    <?php for($related = 5; $related <= 8; $related++):?>
+                    <?php for($related = 4; $related <= 5; $related++):?>
                         <div class="col-xs-6 col-md-3">
                             <div class="thumbnail">
                                 <a href="/items/detail/<?= $items[$related]['id'] ;?>"><img src="<?=  $items[$related]['picture_url'] ;?>">
