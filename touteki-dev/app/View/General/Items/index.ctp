@@ -49,10 +49,10 @@
                     <?php for($related = 1; $related <= 4; $related++):?>
                         <div class="col-xs-6 col-md-3">
                             <div class="thumbnail">
-                                <a href="/items/detail/<?= $related ;?>"><img src="/img/item/discus_<?= $related ;?>.jpg">
+                                <a href="/items/detail/<?= $items[$related]['id'] ;?>"><img src="<?=  $items[$related]['picture_url'] ;?>">
                                     <div class="caption">
-                                        <h3>No.<?= $related ;?></h3>
-                                        <p>アイテム説明</p>
+                                        <h3><?=  $items[$related]['item_name'] ;?></h3>
+                                        <p><?=  $items[$related]['description'] ;?></p>
                                     </div>
                                 </a>
                             </div>
@@ -60,13 +60,13 @@
                     <?php endfor ;?>
                 </div>
                 <div class="item">
-                    <?php for($related = 1; $related <= 4; $related++):?>
+                    <?php for($related = 5; $related <= 8; $related++):?>
                         <div class="col-xs-6 col-md-3">
                             <div class="thumbnail">
-                                <a href="/items/detail/<?= $related ;?>"><img src="/img/item/discus_<?= $related ;?>.jpg">
+                                <a href="/items/detail/<?= $items[$related]['id'] ;?>"><img src="<?=  $items[$related]['picture_url'] ;?>">
                                     <div class="caption">
-                                        <h3>No.<?= $related ;?></h3>
-                                        <p>アイテム説明</p>
+                                        <h3><?=  $items[$related]['item_name'] ;?></h3>
+                                        <p><?=  $items[$related]['description'] ;?></p>
                                     </div>
                                 </a>
                             </div>
