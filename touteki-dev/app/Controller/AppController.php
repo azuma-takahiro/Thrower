@@ -80,7 +80,7 @@ class AppController extends Controller {
             $this->Auth->logoutRedirect = [
                 'controller' => 'customers',
                 'action' => 'signin',
-                'admin' => true
+                // 'admin' => true
             ];
             AuthComponent::$sessionKey = "Auth.Customer";
         } else {
@@ -88,13 +88,5 @@ class AppController extends Controller {
             AuthComponent::$sessionKey = "Auth.User";
         }
     }
-    
-    // public $helpers = [
-    //        'Session',
-    //        'Html' => ['className' => 'TwitterBootstrap.BootstrapHtml'],
-    //        'Form' => ['className' => 'TwitterBootstrap.BootstrapForm'],
-    //        'Paginator' => ['className' => 'TwitterBootstrap.BootstrapPaginator'],
-    //  ];
-    //
-    //  public $uses = [];
+
 }

@@ -14,7 +14,7 @@ class AdminCustomersController extends AppController {
 
     public function beforeFilter() {
         parent::beforeFilter();
-        $this->Auth->allow();
+//        $this->Auth->allow();
 
         $gender = configure::read('gender');
         $this->set('gender', $gender);

@@ -13,7 +13,8 @@ class CustomersController extends AppController {
 
     public function beforeFilter() {
         parent::beforeFilter();
-        $this->Auth->allow('signup','signin','signout','save');
+        $this->Auth->allow();
+        $this->layout = "general";
     }
 
 

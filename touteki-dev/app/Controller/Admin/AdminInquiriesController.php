@@ -13,7 +13,7 @@ class AdminInquiriesController extends AppController {
 
     public function beforeFilter() {
         parent::beforeFilter();
-        $this->Auth->allow();
+//        $this->Auth->allow();
 
         $inquiry_category = configure::read('inquiry_category');
         $this->set('inquiry_category',$inquiry_category);

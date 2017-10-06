@@ -21,7 +21,7 @@ class AdminItemsController extends AppController {
      */
     public function beforeFilter() {
         parent::beforeFilter();
-        $this->Auth->allow();
+//        $this->Auth->allow();
         // $this->set('uri_segment', explode('/', $_SERVER['REQUEST_URI']));
 
         $item_category = configure::read('item_category');
