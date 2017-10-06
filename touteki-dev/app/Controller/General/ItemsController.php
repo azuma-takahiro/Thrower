@@ -65,7 +65,10 @@ class ItemsController extends AppController {
         'Item.id' => 'ASC'
         ];
 
+
         $same_cat_items = $this->Item->find('all',compact('conditions','recursive','order'));
+        $cat_items = Hash::extract($same_cat_items,'{n}.Item');
+        $this->set('items',$cat_items);
         $this->set(compact('item','same_cat_items'));
     }
 
