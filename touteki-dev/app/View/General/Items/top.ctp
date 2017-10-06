@@ -34,13 +34,13 @@
             <h1>RANKING</h1>
             <ul>
                 <li class="col-xs-12 col-md-4">
-                    <a href="http://touteki-dev.tk/items/detail/24">
+                    <a href="http://touteki-dev.tk/items/detail/8">
                         <div class="thumbnail">
                             <img src="/img/item/javelin_5.jpg">
                             <div class="caption">
-                                <h3>商品名：</h3>
-                                <p>説明：</p>
-                                <p>価格：</p>
+                                <h3>商品名：競技用やり~超公式~</h3>
+                                <p>説明：公式競技で使えるやりです。公式の中の公式です。</p>
+                                <p>価格：¥15000</p>
                             </div>
                         </div>
                     </a>
@@ -50,9 +50,9 @@
                         <div class="thumbnail">
                             <img src="/img/item/hammmer_2.jpg">
                             <div class="caption">
-                                <h3>商品名：</h3>
-                                <p>説明：</p>
-                                <p>価格：</p>
+                                <h3>商品名：ハンマー カラフル5個セット</h3>
+                                <p>説明：カラーバリエーション豊富なハンマー5個セット。その日の気分に合わせてどうぞ。</p>
+                                <p>価格：¥19800</p>
                             </div>
                         </div>
                     </a>
@@ -62,9 +62,9 @@
                         <div class="thumbnail">
                             <img src="/img/item/discus_3.jpg">
                             <div class="caption">
-                                <h3>商品名：</h3>
-                                <p>説明：</p>
-                                <p>価格：</p>
+                                <h3>商品名：練習用円盤 1.5kg</h3>
+                                <p>説明：練習用。気軽に競技を始められます。 当HP最安値です。真ん中の×がカワイイ。</p>
+                                <p>価格：¥1350</p>
                             </div>
                         </div>
                     </a>
