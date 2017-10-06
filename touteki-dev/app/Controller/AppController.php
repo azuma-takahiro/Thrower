@@ -52,7 +52,7 @@ class AppController extends Controller {
 
     public function beforeFilter() {
         // debug($this->request->params);exit;
-        if($this->request->params['controller'] == 'Customers' || $this->request->params['controller'] == 'orders') {
+        if($this->request->params['controller'] == 'Customers' || $this->request->params['controller'] == 'orders'|| $this->request->params['controller'] == 'Orders') {
             $this->layout = "general";
             $this->Auth->authenticate = [
                 'Form' => [
