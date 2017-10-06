@@ -13,7 +13,7 @@ class OrdersController extends AppController {
 
     public function beforeFilter() {
         parent::beforeFilter();
-        $this->Auth->allow();
+//        $this->Auth->allow();
         $this->layout = "general";
         $this->set('auth_customer', $this->Auth->Customer);
     }

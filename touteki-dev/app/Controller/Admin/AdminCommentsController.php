@@ -1,8 +1,8 @@
 <?php
 
-App::uses('AdminController', 'Controller');
+App::uses('AppController', 'Controller');
 
-class AdminCommentsController extends AdminController {
+class AdminCommentsController extends AppController {
     public $uses          = [
         'Comment'
     ];
@@ -11,6 +11,10 @@ class AdminCommentsController extends AdminController {
     ];
     public $helpers       = [];
 
+    public function beforeFilter() {
+        parent::beforeFilter();
+//        $this->Auth->allow();
+    }
 
     public function index() {
         $this->Paginator->settings = array(

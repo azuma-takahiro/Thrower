@@ -1,9 +1,8 @@
 <?php
 
-App::uses('AdminController', 'Controller');
-App::import("controller", "AdminOrderDetails");
+App::uses('AppController', 'Controller');
 
-class AdminOrdersController extends AdminController {
+class AdminOrdersController extends AppController {
     public $uses          = [
         'Order',
     ];
@@ -14,7 +13,7 @@ class AdminOrdersController extends AdminController {
 
     public function beforeFilter() {
         parent::beforeFilter();
-        // $this->Auth->allow('add', 'logout');
+//        $this->Auth->allow();
         // $this->set('uri_segment', explode('/', $_SERVER['REQUEST_URI']));
     }
 

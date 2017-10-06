@@ -24,8 +24,7 @@ class AdminUsersController extends AppController {
      */
     public function beforeFilter() {
         parent::beforeFilter();
-//        $this->Auth->allow('login','edit','save');
-//        $this->Auth->allow();
+       $this->Auth->allow('login','edit','save','logout');
         // $admin_components = new AdminController();
         // $this->components = array_merge($this->components,$admin_components->components);
 //        $this->Auth->allow('logout');

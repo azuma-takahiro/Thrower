@@ -1,8 +1,8 @@
 <?php
 
-App::uses('AdminController', 'Controller');
+App::uses('AppController', 'Controller');
 
-class AdminCustomersController extends AdminController {
+class AdminCustomersController extends AppController {
     public $uses          = [
         'Customer',
     ];
@@ -14,6 +14,7 @@ class AdminCustomersController extends AdminController {
 
     public function beforeFilter() {
         parent::beforeFilter();
+//        $this->Auth->allow();
 
         $gender = configure::read('gender');
         $this->set('gender', $gender);
