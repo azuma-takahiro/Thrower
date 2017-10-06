@@ -5,7 +5,7 @@
             <div class="row">
                 <?php if(count($items)) :?>
                     <div class="col-md-12">
-                        <?php for($listcol = 0; $listcol < count($items); $listcol++ ) :?>
+                        <?php for($listcol = 0; $listcol < 6; $listcol++ ) :?>
                             <div class="col-xs-6 col-md-4">
                                 <div class="thumbnail">
                                     <a href="/items/detail/<?= $items[$listcol]['id'];?>"><img src="<?=  $items[$listcol]['picture_url'] ? $items[$listcol]['picture_url'] : '/img/other/noimage.jpeg' ;?>">
