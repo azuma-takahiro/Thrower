@@ -122,7 +122,7 @@ footer {
     border-radius: 40px;
 }
 
-.top_display .container h1{
+.top_display .container h1, #itemlist h2{
     font-family: 'Vidaloka', serif;
     text-align:center;
     font-weight:normal;
@@ -163,6 +163,23 @@ th.required:after {
 /* cart */
 img.img_thumb {
     width: 150px;
+}
+
+/*item*/
+#itemlist .ProductList .thumbnail img{
+    height: 200px;
+}
+#itemlist .ProductList .thumbnail{
+    height: 380px;
+}
+#itemlist .item .thumbnail{
+    height: 300px;
+}
+#itemlist .item .thumbnail{
+    height: 300px;
+}
+#itemlist .Rank .thumbnail{
+    height: 350px;
 }
 
 

@@ -1,37 +1,23 @@
-<div class="container">
+<div id="itemlist" class="container">
     <div class="ProductList">
         <h2>Items</h2>
         <ul class="ProductWrap">
             <div class="row">
-            <?php if(count($items)) :?>
-                <div class="col-md-12">
-                    <?php for($listcol = 0; $listcol <= 2; $listcol++ ) :?>
-                        <div class="col-xs-6 col-md-4">
-                            <div class="thumbnail">
-                                <a href="/items/detail/<?= $items[$listcol]['id'];?>"><img src="<?=  $items[$listcol]['picture_url'] ? $items[$listcol]['picture_url'] : '/img/other/noimage.jpeg' ;?>">
-                                    <div class="caption">
-                                        <h3><?=  $items[$listcol]['item_name'] ;?></h3>
-                                        <p><?=  $items[$listcol]['description'] ;?></p>
-                                    </div>
-                                </a>
+                <?php if(count($items)) :?>
+                    <div class="col-md-12">
+                        <?php for($listcol = 0; $listcol < count($items); $listcol++ ) :?>
+                            <div class="col-xs-6 col-md-4">
+                                <div class="thumbnail">
+                                    <a href="/items/detail/<?= $items[$listcol]['id'];?>"><img src="<?=  $items[$listcol]['picture_url'] ? $items[$listcol]['picture_url'] : '/img/other/noimage.jpeg' ;?>">
+                                        <div class="caption">
+                                            <h3><?=  $items[$listcol]['item_name'] ;?></h3>
+                                            <p><?=  $items[$listcol]['description'] ;?></p>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-                    <?php endfor ;?>
-                </div>
-                <div class="col-md-12">
-                    <?php for($listcol = 3; $listcol <= 5; $listcol++ ) :?>
-                        <div class="col-xs-6 col-md-4">
-                            <div class="thumbnail">
-                                <a href="/items/detail/<?= $items[$listcol]['id'] ;?>"><img src="<?=  $items[$listcol]['picture_url'] ;?>">
-                                    <div class="caption">
-                                        <h3><?=  $items[$listcol]['item_name'] ;?></h3>
-                                        <p><?=  $items[$listcol]['description'] ;?></p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    <?php endfor ;?>
-                </div>
+                        <?php endfor ;?>
+                    </div>
                 <?php else :?>
                     <div class="alert alert-info" role="alert">商品が存在しません。</div>
                 <?php endif ;?>
@@ -89,10 +75,10 @@
                 <?php for($rankls = 1; $rankls <= 3; $rankls++ ) :?>
                     <div class="col-xs-6 col-md-4">
                         <div class="thumbnail">
-                            <a href="/items/detail/<?= $rankls ;?>"><img src="/img/item/discus_<?= $rankls ;?>.jpg">
+                            <a href="/items/detail/<?= $items[$rankls]['id'] ;?>"><img src="<?=  $items[$rankls]['picture_url'] ;?>">
                                 <div class="caption">
-                                    <h3>No.<?= $rankls ;?></h3>
-                                    <p>アイテム説明</p>
+                                    <h3><?=  $items[$rankls]['item_name'] ;?></h3>
+                                    <p><?=  $items[$rankls]['description'] ;?></p>
                                 </div>
                             </a>
                         </div>
@@ -101,3 +87,4 @@
             </div>
         </div><!-- /rank -->
     </div><!-- /main -->
+</div>
