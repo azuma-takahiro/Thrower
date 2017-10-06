@@ -10,73 +10,78 @@ class AppController extends Controller {
     public $components = [
         'DebugKit.Toolbar',
         'Session',
-        'Flash'
-        // 'Auth' => [
-        //     'loginAction' => [
-        //         'controller' => 'adminUsers',
-        //         'action' => 'login'
-        //     ],
-        //     'loginRedirect' => [
-        //         'controller' => 'adminUsers',
-        //         'action' => 'index'
-        //     ],
-        //     'logoutRedirect' => [
-        //         'controller' => 'adminUsers',
-        //         'action' => 'login'
-        //     ],
-        //     'authError' => [
-        //         'ログインしてください。'
-        //     ],
-        //     'authenticate' => [
-        //         'Form' => [
-        //             'userModel' => 'User',
-        //             'fields' => [
-        //                 'username' => 'username',
-        //                 'password' => 'password'
-        //             ],
-        //             'passwordHasher' => array(
-        //                 'className' => 'Simple',
-        //             'hashType' => 'sha1'
-        //             )
-        //         ]
-        //     ]
-        // ]
+        'Flash',
+        'Auth' => [
+            'loginAction' => [
+                'controller' => 'adminUsers',
+                'action' => 'login'
+            ],
+            'loginRedirect' => [
+                'controller' => 'adminUsers',
+                'action' => 'index'
+            ],
+            'logoutRedirect' => [
+                'controller' => 'adminUsers',
+                'action' => 'login'
+            ],
+            'authError' => [
+                'ログインしてください。'
+            ],
+            'authenticate' => [
+                'Form' => [
+                    'userModel' => 'User',
+                    'fields' => [
+                        'username' => 'username',
+                        'password' => 'password'
+                    ],
+                    'passwordHasher' => array(
+                        'className' => 'Simple',
+                    'hashType' => 'sha1'
+                    )
+                ]
+            ]
+        ]
     ];
 
-    // public function beforeFilter() {
-    //     if(isset($this->request->params['admin'])) {
-    //         $this->Auth->authenticate = [
-    //             'Form' => [
-    //                 'userModel' => 'Customer',
-    //                 'fields' => [
-    //                     'username' => 'email',
-    //                     'password' => 'password'
-    //                 ]
-    //             ]
-    //         ];
+    public function beforeFilter() {
+        if($this->request->params['controller'] == 'Customers') {
+            $this->layout = "general";
+            $this->Auth->authenticate = [
+                'Form' => [
+                    'userModel' => 'Customer',
+                    'fields' => [
+                        'username' => 'email',
+                        'password' => 'password'
+                    ],
+                    'passwordHasher' => array(
+                        'className' => 'Simple',
+                    'hashType' => 'sha1'
+                    )
+                ]
+            ];
 
-    //         $this->Auth->loginAction = [
-    //             'controller' => 'customers',
-    //             'action' => 'login',
-    //             'admin' => true
-    //         ];
-    //         $this->Auth->loginRedirect = [
-    //             'controller' => 'customers',
-    //             'action' => 'index',
-    //             'admin' => true
-    //         ];
-    //         $this->Auth->logoutRedirect = [
-    //             'controller' => 'customers',
-    //             'action' => 'login',
-    //             'admin' => true
-    //         ];
-    //         AuthComponent::$sessionKey = "Auth.Customer";
-    //     } else {
-    //         $this->layout = "default";
-    //         AuthComponent::$sessionKey = "Auth.User";
-    //     }
-    // }
-    //
+            $this->Auth->loginAction = [
+                'controller' => 'customers',
+                'action' => 'signin',
+                'admin' => true
+            ];
+            $this->Auth->loginRedirect = [
+                'controller' => 'items',
+                'action' => 'top',
+                'admin' => true
+            ];
+            $this->Auth->logoutRedirect = [
+                'controller' => 'customers',
+                'action' => 'signin',
+                'admin' => true
+            ];
+            AuthComponent::$sessionKey = "Auth.Customer";
+        } else {
+            $this->layout = "default";
+            AuthComponent::$sessionKey = "Auth.User";
+        }
+    }
+    
     // public $helpers = [
     //        'Session',
     //        'Html' => ['className' => 'TwitterBootstrap.BootstrapHtml'],

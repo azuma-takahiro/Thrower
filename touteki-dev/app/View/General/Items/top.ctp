@@ -7,10 +7,10 @@
             <p class='bg-success'>
                 <h1>CATEGORY</h1>
                 <ul>
-                    <li class="col-xs-12 col-md-3"><a href="#"><img src='/img/other/javelin.png'></a></li>
-                    <li class="col-xs-12 col-md-3"><a href="#"><img src='/img/other/discus.png'></a></li>
-                    <li class="col-xs-12 col-md-3"><a href="#"><img src='/img/other/hammer.png'></a></li>
-                    <li class="col-xs-12 col-md-3"><a href="#"><img src='/img/other/shot.png'></a></li>
+                    <li class="col-xs-12 col-md-3"><a href="/items/index/3"><img src='/img/other/javelin.png'></a></li>
+                    <li class="col-xs-12 col-md-3"><a href="/items/index/2"><img src='/img/other/discus.png'></a></li>
+                    <li class="col-xs-12 col-md-3"><a href="/items/index/4"><img src='/img/other/hammer.png'></a></li>
+                    <li class="col-xs-12 col-md-3"><a href="/items/index/1"><img src='/img/other/shot.png'></a></li>
                 </ul>
             </p>
         </div>
@@ -21,9 +21,9 @@
             <h1>EVENT</h1>
             <ul>
                 <li class="mb-none col-md-1"><a href="#"><img src='/img/other/arrow_left.png'></a></li>
-                <li class="col-xs-12 col-md-3"><a href="#"><img src='/img/other/event_1.png'></a></li>
-                <li class="col-xs-12 col-md-3"><a href="#"><img src='/img/other/event_2.png'></a></li>
-                <li class="col-xs-12 col-md-3"><a href="#"><img src='/img/other/event_3.png'></a></li>
+                <li class="col-xs-12 col-md-3"><a href="/events"><img src='/img/other/event_1.png'></a></li>
+                <li class="col-xs-12 col-md-3"><a href="/events/dummy?id=2"><img src='/img/other/event_2.png'></a></li>
+                <li class="col-xs-12 col-md-3"><a href="/events/dummy?id=3"><img src='/img/other/event_3.png'></a></li>
                 <li class="mb-none col-md-1"><a href="#"><img src='/img/other/arrow_right.png'></a></li>
             </ul>
         </div>
@@ -34,7 +34,7 @@
             <h1>RANKING</h1>
             <ul>
                 <li class="col-xs-12 col-md-4">
-                    <a href="#">
+                    <a href="http://touteki-dev.tk/items/detail/24">
                         <div class="thumbnail">
                             <img src="/img/item/javelin_5.jpg">
                             <div class="caption">
@@ -46,7 +46,7 @@
                     </a>
                 </li>
                 <li class="col-xs-12 col-md-4">
-                    <a href="#">
+                    <a href="http://touteki-dev.tk/items/detail/16">
                         <div class="thumbnail">
                             <img src="/img/item/hammmer_2.jpg">
                             <div class="caption">
@@ -58,7 +58,7 @@
                     </a>
                 </li>
                 <li class="col-xs-12 col-md-4">
-                    <a href="#">
+                    <a href="http://touteki-dev.tk/items/detail/11">
                         <div class="thumbnail">
                             <img src="/img/item/discus_3.jpg">
                             <div class="caption">
@@ -73,5 +73,5 @@
         </div>
     </div>
 
-    
+
 </div>
