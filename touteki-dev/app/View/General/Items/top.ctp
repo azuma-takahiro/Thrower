@@ -34,7 +34,7 @@
             <h1>RANKING</h1>
             <ul>
                 <li class="col-xs-12 col-md-4">
-                    <a href="#">
+                    <a href="http://touteki-dev.tk/items/detail/24">
                         <div class="thumbnail">
                             <img src="/img/item/javelin_5.jpg">
                             <div class="caption">
@@ -46,7 +46,7 @@
                     </a>
                 </li>
                 <li class="col-xs-12 col-md-4">
-                    <a href="#">
+                    <a href="http://touteki-dev.tk/items/detail/16">
                         <div class="thumbnail">
                             <img src="/img/item/hammmer_2.jpg">
                             <div class="caption">
@@ -58,7 +58,7 @@
                     </a>
                 </li>
                 <li class="col-xs-12 col-md-4">
-                    <a href="#">
+                    <a href="http://touteki-dev.tk/items/detail/11">
                         <div class="thumbnail">
                             <img src="/img/item/discus_3.jpg">
                             <div class="caption">

@@ -27,7 +27,7 @@
         </div>
     </div><!-- ProductDetail -->
 
-    <div class="container bg-warning">
+    <div class="container">
         <h3><p>USER'S COMMENT</p></h3>
         <?php if(empty($item['Comment'])):?>
             まだコメントはありません
@@ -38,7 +38,7 @@
         <?php endif;?>
     </div><!-- Review -->
 
-    <div class="container bg-info">
+    <div class="container">
         <h2><p class="headline">RELATED PRODUCT</p></h2>
         <ul class="container">
             <li class="mb-none col-md-1"><img src='/img/other/large_arrow_left.png'></li>
