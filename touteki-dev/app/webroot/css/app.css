@@ -18,7 +18,7 @@ li{
 
 footer {
   text-align: center;
-  background-color: #101010;
+  background-color: #fcf5e8;
 }
 .container{
     padding-top: 140px;
@@ -37,12 +37,12 @@ footer {
 }
 
 .gnavi_general #logo img{
-    width: 230px;
+    width: 180px;
     margin-left: 100px;
 }
 
 .gnavi_general #gnavi_bottom, .gnavi_general #search_wrap {
-    padding-top: 20px;
+    padding-top: 10px;
 }
 
 #gnavi_top #add,#gnavi_top #login{
@@ -50,7 +50,7 @@ footer {
 }
 #header .navbar-default{
     background: #fdfbe2;
-    /*position: fixed;*/
+    position: fixed;
     width: 100%;
 }
 #header a{
@@ -59,6 +59,12 @@ footer {
 }
 .nav.navbar-nav li{
     border-right: dotted 4px #a37e52;
+}
+.nav.navbar-nav li a, #search_wrap #cart a{
+    transition-duration: 0.4s;
+}
+.nav.navbar-nav li a:hover, #search_wrap #cart a:hover{
+    opacity: 0.5;
 }
 .nav.navbar-nav li a .fa-home{
     font-size: 25px;
@@ -92,7 +98,7 @@ footer {
     width: 100%;
     height: 700px;
     position: relative;
-    top: 113px;
+    top: 89px;
 }
 #top_image iframe{
     position: absolute;
@@ -100,6 +106,45 @@ footer {
     bottom: 0;
 }
 
+.top_display h1{
+    text-align: center;
+}
+
+.top_display a img {
+    transition-duration: 0.3s;
+}
+
+.top_display a:hover img {
+    opacity: 0.7;
+}
+
+.top_category img {
+    border-radius: 40px;
+}
+
+.top_display .container h1{
+    font-family: 'Vidaloka', serif;
+    text-align:center;
+    font-weight:normal;
+    color:#ffa36b;
+    display:block;
+    font-size:72px;
+    line-height:144px;
+    letter-spacing:-4px;
+    text-shadow:1px 1px 3px #fff,3px 3px 6px #888;
+    background-image: url(/img/other/title.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+/* Events dummy */
+
+.dummy_img {
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    height: auto;
+}
 
 /*customer*/
 th.required:after {
@@ -113,4 +158,24 @@ th.required:after {
 }
 #CustomerGender2{
     margin-left: 5px;
+}
+
+/* cart */
+img.img_thumb {
+    width: 150px;
+}
+
+
+/* footer */
+footer .container {
+    padding-top: 20px;
+}
+
+footer .sns {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+footer .img-thumbnail {
+    margin: 10px;
 }

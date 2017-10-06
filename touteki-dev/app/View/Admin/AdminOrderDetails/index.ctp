@@ -50,3 +50,6 @@
 <?php else: ?>
     <?php echo "登録されている情報はありません"?>
 <?php endif; ?>
+<div style="margin-top: 10px; text-align: center;">
+    <a href="/AdminOrders/" class="btn btn-info">戻る</a>
+</div>

@@ -11,43 +11,43 @@
             <ul>
                 <li>
                     <h4>朝顔の支柱に</h4>
-                    <img src="/img/other/woman_4.png" class="img1">
-                    <a href="#"><button class="btn btn-warning">商品の詳細はこちら</button></a>
+                    <div class="img1"></div>
+                    <a href="http://touteki-dev.tk/items/detail/20"><button class="btn btn-warning">商品の詳細はこちら</button></a>
                 </li>
                 <li>
                     <h4>お皿の代わりに</h4>
-                    <img src="/img/other/cook.png" class="img2">
-                    <a href="#"><button class="btn btn-warning">商品の詳細はこちら</button></a>
+                    <div class="img2"></div>
+                    <a href="http://touteki-dev.tk/items/detail/12"><button class="btn btn-warning">商品の詳細はこちら</button></a>
                 </li>
                 <li>
                     <h4>いつものアレを混ぜる時に</h4>
-                    <img src="/img/other/witch.PNG" class="img4">
-                    <a href="#"><button class="btn btn-warning">商品の詳細はこちら</button></a>
+                    <div class="img4"></div>
+                    <a href="http://touteki-dev.tk/items/detail/21"><button class="btn btn-warning">商品の詳細はこちら</button></a>
                 </li>
                 <li class="List_l">
                     <h4>二股された時に</h4>
-                    <img src="/img/other/huta.png" class="img3">
-                    <a href="#"><button class="btn btn-warning">商品の詳細はこちら</button></a>
+                    <div class="img3"></div>
+                    <a href="http://touteki-dev.tk/items/detail/27"><button class="btn btn-warning">商品の詳細はこちら</button></a>
                 </li>
                 <li class="List_l">
                     <h4>掃除をして欲しい時に</h4>
-                    <img src="/img/other/roomba.png" class="img8">
-                    <a href="#"><button class="btn btn-warning">商品の詳細はこちら</button></a>
+                    <div class="img8"></div>
+                    <a href="https://www.irobot-jp.com/product/900series/simple.html"><button class="btn btn-warning">商品の詳細はこちら</button></a>
                 </li>
                 <li>
                     <h4>音楽を聴きたい時に</h4>
-                    <img src="/img/other/music.png" class="img7">
-                    <a href="#"><button class="btn btn-warning">商品の詳細はこちら</button></a>
+                    <div class="img7"></div>
+                    <a href="http://www.sony.jp/walkman/products/RDP-NWV25B/"><button class="btn btn-warning">商品の詳細はこちら</button></a>
                 </li>
                 <li>
                     <h4>ペットが欲しいけど<br>難しい時に</h4>
-                    <img src="/img/other/woman_1.png" class="img5">
-                    <a href="#"><button class="btn btn-warning">商品の詳細はこちら</button></a>
+                    <div class="img5"></div>
+                    <a href="http://touteki-dev.tk/items/detail/16"><button class="btn btn-warning">商品の詳細はこちら</button></a>
                 </li>
                 <li>
                     <h4>美少女戦士になりたい時に</h4>
-                    <img src="/img/other/moon.png" class="img6">
-                    <a href="#"><button class="btn btn-warning">商品の詳細はこちら</button></a>
+                    <div class="img6"></div>
+                    <a href="http://sailormoon-official.com/"><button class="btn btn-warning">商品の詳細はこちら</button></a>
                 </li>
             </ul>
         </div>

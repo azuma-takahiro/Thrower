@@ -38,8 +38,9 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		echo $this->fetch('script');
 	?>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script type="text/javascript" src="/js/jquery.cookie.js"></script>
     <?php echo $this->Html->script('bootstrap'); ?>
+    <?php echo $this->Html->script('jquery.cookie'); ?>
+    <?php echo $this->Html->script('common'); ?>
 </head>
 <body>
 	<div id="container">
@@ -53,6 +54,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 			<?php echo $this->fetch('content'); ?>
 		</div>
 		<div id="footer">
+			<?php echo $this->element('footer'); ?>
 		</div>
 	</div>
 </body>

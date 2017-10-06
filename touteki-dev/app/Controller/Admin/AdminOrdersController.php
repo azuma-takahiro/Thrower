@@ -1,6 +1,7 @@
 <?php
 
 App::uses('AdminController', 'Controller');
+App::import("controller", "AdminOrderDetails");
 
 class AdminOrdersController extends AdminController {
     public $uses          = [
