@@ -5,6 +5,7 @@ App::uses('AppController', 'Controller');
 class OrdersController extends AppController {
     public $uses          = [
         'Order',
+        'Item',
     ];
     public $helpers       = [];
     public $components    = [
@@ -35,6 +36,20 @@ class OrdersController extends AppController {
 
     public function confirm() {
         $in_cart = json_decode($_COOKIE['in_cart'],true);
-        $this->request->data['item'] = $in_cart;
+        $items = [];
+        $idx = 0;
+        foreach($in_cart as $item_id => $item) {
+            $items[$idx] = $this->Item->findById($item_id);
+            $items[$idx]['item_num'] = $item['item_num'];
+            $idx++;
+        }
+        $this->request->data['item'] = $items;
+    }
+
+    public function save() {
+        $buy_items = json_decode($_COOKIE['in_cart'],true);
+        echo '購入完了しました';exit;
+        debug($this->Auth->user());
+        debug($this->request->data);exit;
     }
 }

@@ -13,7 +13,7 @@
     		確定
     	</div> -->
     </div>
-    <?= $this->Form->create('Order',['url' => ['contrller' => 'Orders','action' => 'confirm']]) ;?>
+    <?= $this->Form->create('Order',['url' => ['controller' => 'Orders','action' => 'confirm']]) ;?>
     <input type="hidden" name="data[Order][customer_id]" value="<?=$auth_customer['id'];?>">
 
     <button type="button" name="flowData" class="btn btn-info">自宅に投擲ィ</button>
